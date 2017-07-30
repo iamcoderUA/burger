@@ -1,0 +1,84 @@
+.feed-page {
+	width: 100%;
+	height: 100vh;
+	min-height: 650px;
+	
+	&__list {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-wrap: wrap;
+	}
+}
+
+.feed-page__item {
+  flex-basis: 25%;
+	position: relative;
+	transform: scale(1);
+
+	&:hover .feed-page__layer {
+		transition: .7s;
+		transform: scale(1);
+		color: rgba(255,255,255,1);
+		background-color: rgba(0,0,0,.7);
+	}
+	&:hover .feed-page__btn {
+		transition: .7s;
+		background-color: rgb(47, 50, 52);
+		color: #FFF;
+		&:hover {
+			transition: .5s;
+			background-color: #1f2122;
+		}
+	}
+}
+
+.feed-page__image {
+	width: 100%;
+	height: 100%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	filter: grayscale(1);
+}
+
+.feed-page__layer {
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-color: transparent;
+	color: transparent;
+	width: 100%;
+	height: 100%;
+	transform: scale(.7);
+}
+
+.feed-page__info {
+	padding: 44px 30px 0 20px;
+	font-size: 14px;
+}
+
+.feed-page__title {
+	font-family: "Gagalin";
+	text-transform: uppercase;
+	margin-bottom: 19px;
+}
+
+.feed-page__text {
+	font-family: "Ubuntu-Light";
+	line-height: 24px;
+	margin-bottom: 12px;
+}
+
+.feed-page__btn {
+	display: inline-block;
+	width: 110px;
+	height: 35px;
+	font-family: "Ubuntu-Medium";
+	font-size: 13px;
+	text-transform: uppercase;
+	color: transparent;
+	padding: 8px 15px;
+	border-radius: 5px;
+}
+

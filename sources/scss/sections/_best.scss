@@ -1,0 +1,68 @@
+.best {
+	width: 100%;
+	height: 100vh;
+	min-height: 650px;
+	background-image: url(../img/bg/bg-2.jpg);
+	background-repeat: no-repeat; 
+	background-position: center bottom;
+	background-size: cover;
+	position: relative;
+}
+
+.best-content {
+	display: flex; 
+	flex-direction: column;
+}
+
+.best-content__title {
+	display: flex;
+	justify-content: center;
+	padding-top: 49px;
+	margin-bottom: 68px;
+}
+
+.best-content__text {
+	font-family: "Gagalin";
+	font-size: 72px;
+	color: $colsec2;
+}
+
+.best-content__description {
+	display: flex;
+}
+
+.advantages {
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+}
+
+.advantages__item {
+	width: 300px;
+	text-align: center;
+	margin-left: 20px;
+	&:first-child {
+		margin-left: 0;
+	}
+}
+
+.advantages__image {
+	display: flex;
+	justify-content: center;
+	margin-bottom: 30px;
+}
+
+.advantages__title {
+	font-family: "Lifehack";
+	font-size: 24.1px;
+	line-height: 28.11px;	
+	color: $colsec2;
+	margin-bottom: 12px;
+}
+
+.advantages__text {
+	font-size: 14px;
+	line-height: 24px;
+	padding: 0px 4px;
+}
+
