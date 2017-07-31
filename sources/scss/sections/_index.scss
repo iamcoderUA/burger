@@ -14,6 +14,7 @@
 .container {
 	max-width: 940px;
 	margin: 0 auto;
+	min-height: 650px;
 }
 
 .header {
@@ -80,7 +81,7 @@
 	height: 35px;
 	border-radius: 5px;
 	background-color: rgb(228, 80, 40);
-	padding: 7px 18px 7px 16px;
+	padding: 7px 16px 7px 16px;
 	transition: .3s;
 	overflow: hidden;
 	white-space: nowrap;
@@ -126,8 +127,15 @@
 	position: absolute;
 	bottom: 6%;
 	left: 49%;
-}
-
-.sasha {
-	color: red;
+	&:hover {
+		display: inline-block;
+		vertical-align: middle;
+		transform: perspective(1px) translateZ(0);
+		box-shadow: 0 0 1px transparent;
+		transition-duration: 0.3s;
+		transition-property: transform;
+		transition-timing-function: ease-out;
+		transform: translateY(-8px);
+		transition-duration: .5s;
+	}
 }

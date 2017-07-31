@@ -7,17 +7,23 @@
 	background-position: center bottom;
 	background-size: cover;
 	position: relative;
+	display: flex; 
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 .best-content {
 	display: flex; 
 	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-top: 49px;
 }
 
 .best-content__title {
 	display: flex;
 	justify-content: center;
-	padding-top: 49px;
 	margin-bottom: 68px;
 }
 
