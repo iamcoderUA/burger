@@ -9,12 +9,19 @@
 	background-size: cover;
 	font-family: ubuntumedium;
 	position: relative;
+	display: flex;
 }
 
 .container {
 	max-width: 940px;
 	margin: 0 auto;
 	min-height: 650px;
+}
+
+.intro-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 .header {
@@ -94,16 +101,17 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	padding-bottom: 15%;
 }
 
 .intro-content__left {
 	margin-right: 13px;
-	margin-top: -6px;
+	margin-top: -14px;
 	padding-left: 16px;
 }
 
 .intro-content__right {
-	padding-top: 46px;
+	padding-top: 38px;
 }
 
 .intro-content__big {

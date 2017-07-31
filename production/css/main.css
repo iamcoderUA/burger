@@ -209,12 +209,32 @@ body {
   background-size: cover;
   font-family: ubuntumedium;
   position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .container {
   max-width: 940px;
   margin: 0 auto;
   min-height: 650px;
+}
+
+.intro-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
 }
 
 .header {
@@ -331,16 +351,17 @@ body {
   -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
+  padding-bottom: 15%;
 }
 
 .intro-content__left {
   margin-right: 13px;
-  margin-top: -6px;
+  margin-top: -14px;
   padding-left: 16px;
 }
 
 .intro-content__right {
-  padding-top: 46px;
+  padding-top: 38px;
 }
 
 .intro-content__big {
