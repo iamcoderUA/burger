@@ -1,5 +1,7 @@
 /*components*/
 @import "components/_variables.scss";
+@import "components/_mixins.scss";
+
 
 /* layout */
 @import "layout/fonts.scss";
@@ -10,4 +12,9 @@
 /* sections */
 @import "sections/index.scss";
 @import "sections/best.scss";
+@import "sections/burger.scss";
+@import "sections/team.scss";
+@import "sections/menu.scss";
 @import "sections/_feedbacks.scss";
+@import "sections/delivery.scss";
+@import "sections/contacts.scss";

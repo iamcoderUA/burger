@@ -9,6 +9,12 @@
   height: 100%;
 }
 
+.container {
+  max-width: 940px;
+  margin: 0 auto;
+  min-height: 650px;
+}
+
 .fixed-menu {
   position: fixed;
   z-index: 10;

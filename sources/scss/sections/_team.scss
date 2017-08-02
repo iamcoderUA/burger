@@ -1,0 +1,122 @@
+	.team {
+		width: 100%;
+		height: 100vh;
+		min-height: 650px;
+		overflow: hidden;
+		background-image: url(../img/bg/bg-team.jpg);
+		background-repeat: no-repeat; 
+		background-position: center top;
+		background-size: cover;
+		position: relative;
+	}
+
+	.info {
+		background-color: #2f3234;
+		opacity: 0.929;
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 50%;
+		height: 100%;
+	}
+
+	.info-container {
+		height: 100%;
+		padding: 59px 105px 0 90px;
+	}
+
+	.info-title {
+		@extend %caption;
+		margin-bottom: 63px;
+	}
+
+	.info-list__item {
+		display: block;
+	}
+
+	.info-list__item_active {
+		transition: .7s;
+		&:hover .info-list__link:before {
+			transform: rotate(180deg);
+			transition: .7s;
+		}
+		&:hover .info-list__link {
+			color: $colsec1;
+			transition: .7s;
+		}
+		&:hover .info-list__description {
+			height: 100%;
+			margin-bottom: 36px;
+			transition: .7s;
+		}
+	}
+
+	.info-list__link {
+		display: inline-block;
+		font-family: "Gagalin";
+		font-size: 14px;
+		line-height: 24px;
+		color: #fFF;
+		text-transform: uppercase;
+		text-decoration: none;
+		margin-bottom: 10px;
+		padding-left: 20px;
+		position: relative;
+		transition: .7s;
+		&:before {
+			content: "";
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 40%;
+			border-top: 6px solid $colsec1;
+			border-right: 5px solid transparent;
+			border-bottom: 0px solid transparent;
+			border-left: 5px solid transparent;
+			transition: .7s;
+		}
+	}
+
+	.info-list__description {
+		display: flex;
+		height: 0;
+		overflow: hidden;
+		margin-bottom: 16px;
+		// transition: .7s;
+		padding-left: 18px;
+	}
+
+	.info-list__picture {
+		width: 132px;
+		height: 100px;
+		max-width: 100%;
+		margin-right: 21px;
+	}
+
+	.info-list__img {
+		background-position: center;
+		background-repeat: no-repeat;
+		width: 100px;
+		height: 100px;
+		max-width: 100%;
+		border-radius: 50%;
+	}
+
+	.info-list__occupation {
+		font-size: 14px;
+		// line-height: 24px;
+		color: #fFF;
+	}
+
+	.info-list__title {
+		font-family: "Ubuntu-Bold";
+		margin-bottom: 11px;
+	}
+
+	.info-list__text {
+		font-family: "Ubuntu-Light";
+		line-height: 24px;
+
+	}
+
+

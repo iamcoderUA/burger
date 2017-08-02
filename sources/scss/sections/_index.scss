@@ -3,19 +3,13 @@
 	height: 100vh;
 	min-height: 650px;
 	overflow: hidden;
-	background-image: url(../img/bg/bg-1.jpg);
+	background-image: url(../img/bg/bg-intro.jpg);
 	background-repeat: no-repeat; 
 	background-position: center center;
 	background-size: cover;
 	font-family: ubuntumedium;
 	position: relative;
 	display: flex;
-}
-
-.container {
-	max-width: 940px;
-	margin: 0 auto;
-	min-height: 650px;
 }
 
 .intro-container {
@@ -115,10 +109,8 @@
 }
 
 .intro-content__big {
+	@extend %caption;
 	margin-bottom: 14px;
-	font-family: "Gagalin";
-	font-size: 72px;
-	color: $colsec1;
 }
 
 .intro-content__small {
@@ -135,6 +127,7 @@
 	position: absolute;
 	bottom: 6%;
 	left: 49%;
+	transition: .5s;
 	&:hover {
 		display: inline-block;
 		vertical-align: middle;
