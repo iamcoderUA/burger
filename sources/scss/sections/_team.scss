@@ -32,22 +32,23 @@
 
 	.info-list__item {
 		display: block;
+		margin-bottom: 16px;
 	}
 
 	.info-list__item_active {
-		transition: .7s;
-		&:hover .info-list__link:before {
+		transition: .5s;
+		& .info-list__link:before {
 			transform: rotate(180deg);
 			transition: .7s;
 		}
-		&:hover .info-list__link {
+		& .info-list__link {
 			color: $colsec1;
 			transition: .7s;
 		}
-		&:hover .info-list__description {
+		& .info-list__description {
+			transition: 2s all;
 			height: 100%;
-			margin-bottom: 36px;
-			transition: .7s;
+			margin-bottom: 37px;
 		}
 	}
 
@@ -58,7 +59,6 @@
 		line-height: 24px;
 		color: #fFF;
 		text-transform: uppercase;
-		text-decoration: none;
 		margin-bottom: 10px;
 		padding-left: 20px;
 		position: relative;
@@ -81,21 +81,16 @@
 		display: flex;
 		height: 0;
 		overflow: hidden;
-		margin-bottom: 16px;
-		// transition: .7s;
 		padding-left: 18px;
+		transition: .5s;
 	}
 
 	.info-list__picture {
-		width: 132px;
-		height: 100px;
-		max-width: 100%;
 		margin-right: 21px;
 	}
 
 	.info-list__img {
-		background-position: center;
-		background-repeat: no-repeat;
+		@include cover;
 		width: 100px;
 		height: 100px;
 		max-width: 100%;
@@ -104,7 +99,6 @@
 
 	.info-list__occupation {
 		font-size: 14px;
-		// line-height: 24px;
 		color: #fFF;
 	}
 

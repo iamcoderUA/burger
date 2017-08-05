@@ -3,3 +3,26 @@
 	font-size: 72px;
 	color: $colsec1;
 }
+
+@mixin cover {
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+@mixin input ($min-width: 100px) {
+	font-size: 16px;
+	padding: 14px;
+	background: #fff;
+	border-radius: 7px;
+	border: 0;
+	flex: 1;
+	min-width: $min-width;
+	margin-left: 10px;
+
+	// @if $width <= 100px {
+	// 	text-align: center;
+	// } @else {
+	// 	text-align: left;
+	// }
+} 
