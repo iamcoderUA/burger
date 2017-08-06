@@ -7,6 +7,7 @@
 
 h1, h2, h3, h4, h5, h6 {
 	margin: 0;
+  font-weight: normal;
 }
 
 a {
@@ -33,12 +34,11 @@ html, body {
 }
 
 html {
-	font-family: sans-serif;
-	cursor: default;
+  cursor: default;
 }
 
 body {
-	font-family: "Ubuntu-Light";
-	line-height: 1.42;
+  font-family: "Ubuntu-Light", Helvetica, sans-serif;
+  line-height: 1.42;
 }
 /*End of Basic Styles*/

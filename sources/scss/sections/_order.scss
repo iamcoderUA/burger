@@ -60,7 +60,6 @@
 
 .order-form__field-title {
 	display: block;
-	font-family: "Ubuntu-Light";
 	font-size: 14px;
 	color: #fff;
 	margin-bottom: 3px;
@@ -169,16 +168,19 @@
 }
 
 .order-form__button {
-	margin-right: 20px;
 	border: 0;
-	background: $btn;
-	font-size: 13px;
-	text-transform: uppercase;
 	border-radius: 5px;
+	background: $btn;
 	color: #fff;
 	font-family: "Ubuntu-Medium";
+	font-size: 13px;
+	text-transform: uppercase;
 	padding: 10px 15px;
+	margin-right: 20px;
 	cursor: pointer;
+	&:hover {
+		background: rgb(193, 64, 30);
+	}
 }
 
 .order-form__button-reset {
@@ -186,5 +188,9 @@
 	padding-right: 0;
 	text-transform: none;
 	background: transparent;
+	&:hover {
+		background: transparent;
+	}
 }
+
 

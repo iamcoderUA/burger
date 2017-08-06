@@ -12,13 +12,10 @@
 
 @mixin input ($min-width: 100px) {
 	font-size: 16px;
-	padding: 14px;
+	padding: 9px;
 	background: #fff;
-	border-radius: 7px;
+	border-radius: 5px;
 	border: 0;
-	flex: 1;
-	min-width: $min-width;
-	margin-left: 10px;
 
 	// @if $width <= 100px {
 	// 	text-align: center;
