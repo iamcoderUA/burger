@@ -1,7 +1,7 @@
 	.team {
 		width: 100%;
 		height: 100vh;
-		min-height: 650px;
+		min-height: rem(650px);
 		overflow: hidden;
 		background-image: url(../img/bg/bg-team.jpg);
 		background-repeat: no-repeat; 
@@ -18,17 +18,17 @@
 		right: 0;
 		width: 50%;
 		height: 100%;
-		padding: 59px 105px 0 90px;
+		padding: rem(59px) rem(105px) 0 rem(90px);
 	}
 
 	.info-title {
 		@extend %caption;
-		margin-bottom: 63px;
+		margin-bottom: rem(63px);
 	}
 
 	.info-list__item {
 		display: block;
-		margin-bottom: 16px;
+		margin-bottom: rem(16px);
 	}
 
 	.info-list__item.active {
@@ -44,19 +44,19 @@
 		& .info-list__description {
 			transition: 2s all;
 			height: 100%;
-			margin-bottom: 37px;
+			margin-bottom: rem(37px);
 		}
 	}
 
 	.info-list__link {
 		display: inline-block;
 		font-family: "Gagalin";
-		font-size: 14px;
-		line-height: 24px;
+		font-size: rem(14px);
+		line-height: rem(24px);
 		color: #fFF;
 		text-transform: uppercase;
-		margin-bottom: 10px;
-		padding-left: 20px;
+		margin-bottom: rem(10px);
+		padding-left: rem(20px);
 		position: relative;
 		transition: .7s;
 		&:before {
@@ -65,10 +65,10 @@
 			position: absolute;
 			left: 0;
 			top: 40%;
-			border-top: 6px solid $colsec1;
-			border-right: 5px solid transparent;
-			border-bottom: 0px solid transparent;
-			border-left: 5px solid transparent;
+			border-top: rem(6px) solid $colsec1;
+			border-right: rem(5px) solid transparent;
+			border-bottom: rem(0px) solid transparent;
+			border-left: rem(5px) solid transparent;
 			transition: .7s;
 		}
 	}
@@ -77,36 +77,36 @@
 		display: flex;
 		height: 0;
 		overflow: hidden;
-		padding-left: 18px;
+		padding-left: rem(18px);
 		transition: .5s;
 	}
 
 	.info-list__picture {
-		width: 100px;
-		height: 100px;
-		margin-right: 21px;
+		width: rem(100px);
+		height: rem(100px);
+		margin-right: rem(21px);
 	}
 
 	.info-list__img {
 		@include cover;
-		width: 100px;
-		height: 100px;
+		width: rem(100px);
+		height: rem(100px);
 		max-width: 100%;
 		border-radius: 50%;
 	}
 
 	.info-list__occupation {
-		font-size: 14px;
+		font-size: rem(14px);
 		color: #fFF;
 	}
 
 	.info-list__title {
 		font-family: "Ubuntu-Bold";
-		margin-bottom: 11px;
+		margin-bottom: rem(11px);
 	}
 
 	.info-list__text {
-		line-height: 24px;
+		line-height: rem(24px);
 	}
 
 

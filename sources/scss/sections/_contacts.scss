@@ -1,7 +1,7 @@
 .contacts {
 	width: 100%;
 	height: 100vh;
-	min-height: 650px;
+	min-height: rem(650px);
 	overflow: hidden;
 }
 
@@ -18,25 +18,25 @@
 	background-image: url(../img/bg/bg-footer.png);
 	background-position: center;
 	width: 100%;
-	height: 58px;
-	padding-top: 7px;
-	padding-bottom: 9px;
+	height: rem(58px);
+	padding-top: rem(7px);
+	padding-bottom: rem(9px);
 }
 
 .footer-container {
 	display: flex;
 	justify-content: space-between;
-	width: 940px;
+	width: rem(940px);
 	margin: 0 auto;
 }
 
 .footer-left {
-	font-size: 14px;
+	font-size: rem(14px);
 }
 
 .footer-left__adress {
 	color: #fff;
-	margin-bottom: 6px;
+	margin-bottom: rem(6px);
 }
 
 .footer-left__phone {
@@ -48,13 +48,13 @@
 .footer-left__phone-icon {
 	display: inline-block;
 	vertical-align: middle;
-	width: 12px;
-	height: 19px;
+	width: rem(12px);
+	height: rem(19px);
 }
 
 .footer-left__phone-text {
 	display: inline-block;
-	padding-left: 5px;
+	padding-left: rem(5px);
 }
 
 
@@ -68,13 +68,13 @@
 }
 
 .socials__item {
-	margin-left: 20px;
+	margin-left: rem(20px);
 }
 
 .socials__link {
 	display: inline-block;
-	max-width: 23px;
-	max-height: 20px;
+	max-width: rem(23px);
+	max-height: rem(20px);
 	opacity: .3;
 	transition: .3s;
 	&:hover {
@@ -83,6 +83,6 @@
 }
 
 .socials__icon {
-	width: 20px;
-	height: 20px;
+	width: rem(20px);
+	height: rem(20px);
 }

@@ -7,7 +7,7 @@
 
 h1, h2, h3, h4, h5, h6 {
 	margin: 0;
-  font-weight: normal;
+	font-weight: normal;
 }
 
 a {
@@ -15,9 +15,9 @@ a {
 }
 
 ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
 }
 
 *, *:before, *:after {
@@ -34,11 +34,20 @@ html, body {
 }
 
 html {
-  cursor: default;
-}
+	cursor: default;
 
+	@include tablets {
+		font-size: rem(15px);
+	}
+
+	@include phones {
+		font-size: rem(13px);
+	}
+}
 body {
-  font-family: "Ubuntu-Light", Helvetica, sans-serif;
-  line-height: 1.42;
+	font-size: rem(16px);
+	font-family: "Ubuntu-Light", Helvetica, sans-serif;
+	line-height: 1.42;
+	-webkit-font-smoothing: antialiased;
 }
 /*End of Basic Styles*/

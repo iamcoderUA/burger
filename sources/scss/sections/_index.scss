@@ -1,7 +1,7 @@
 .intro {
 	width: 100%;
 	height: 100vh;
-	min-height: 650px;
+	min-height: rem(650px);
 	overflow: hidden;
 	background-image: url(../img/bg/bg-intro.jpg);
 	background-repeat: no-repeat; 
@@ -21,15 +21,15 @@
 .header {
 	display: flex;
 	justify-content: space-between;
-	padding-top: 12px;
+	padding-top: rem(12px);
 }
 
 .header__logo {
 	background: url(../img/icons/logo.svg) no-repeat;
 	background-size: cover;
-	width: 92px;
-	height: 69px;
-	margin-left: -2px;
+	width: rem(92px);
+	height: rem(69px);
+	margin-left: rem(-2px);
 }
 
 .nav-menu {
@@ -37,16 +37,16 @@
 	&__list {
 		display: flex;
 		align-items: center;
-		margin-top: -3px;
-		margin-right: 15px;
+		margin-top: rem(-3px);
+		margin-right: rem(15px);
 	}
 }
 
 .nav-menu__item {
 	list-style-type: disc;
 	color: #FFF;
-	margin-left: 30px;
-	padding-left: 5px;
+	margin-left: rem(30px);
+	padding-left: rem(5px);
 	transition: 0.3s;
 
 	&:hover {
@@ -60,7 +60,7 @@
 
 .nav-menu__link {
 	font-family: "Ubuntu-Medium";
-	font-size: 13px;
+	font-size: rem(13px);
 	color: #FFF;
 	text-transform: uppercase;
 	&:hover {
@@ -70,19 +70,20 @@
 
 .nav-menu__btn {
 	display: flex;
+	align-items: center;
 	align-self: center;
 }
 
 .order-btn {
 	font-family: "Ubuntu-Medium";
-	font-size: 13px;
+	font-size: rem(13px);
 	color: #FFF;
 	text-transform: uppercase;
-	width: 97px;
-	height: 35px;
-	border-radius: 5px;
+	width: rem(97px);
+	height: rem(35px);
+	border-radius: rem(5px);
 	background-color: rgb(228, 80, 40);
-	padding: 7px 16px 7px 16px;
+	padding: rem(7px) rem(16px) rem(7px) rem(16px);
 	transition: .3s;
 	overflow: hidden;
 	white-space: nowrap;
@@ -90,6 +91,44 @@
 		background-color: rgb(193, 64, 30);
 	}
 }
+
+.hamburger-menu {
+  display: flex;
+	align-items: center;
+	position: relative;
+	width: 24px;
+	height: 24px;
+	margin-left: 30px;
+  display: none;
+
+  @include tablets() {
+    display: flex;
+  }
+}
+
+.hamburger-menu__bars {
+	&, &:before, &:after {
+		background: #fff;
+		width: rem(24px);
+		height: rem(4px);
+		border-radius: rem(3px);
+	}
+
+	&:before, &:after {
+		content: "";
+		display: block;
+		position: absolute;
+	}
+
+	&:before {
+		top: 0;
+	}
+
+	&:after {
+		bottom: 0;
+	}
+}
+
 
 .intro-content {
 	display: flex;
@@ -99,31 +138,31 @@
 }
 
 .intro-content__left {
-	margin-right: 13px;
-	margin-top: -14px;
-	padding-left: 16px;
+	margin-right: rem(13px);
+	margin-top: rem(-14px);
+	padding-left: rem(16px);
 }
 
 .intro-content__right {
-	padding-top: 38px;
+	padding-top: rem(38px);
 }
 
 .intro-content__big {
 	@extend %caption;
-	margin-bottom: 14px;
+	margin-bottom: rem(14px);
 }
 
 .intro-content__small {
 	font-family: "Lifehack";
-	font-size: 63px;
-	line-height: 60px;
+	font-size: rem(63px);
+	line-height: rem(60px);
 	color: #FFF;
 }
 
 .next-page__image {
 	background: url(../img/icons/arrow-scroll.svg) no-repeat;
-	width: 29px;
-	height: 15px;
+	width: rem(29px);
+	height: rem(15px);
 	position: absolute;
 	bottom: 6%;
 	left: 49%;
@@ -131,12 +170,12 @@
 	&:hover {
 		display: inline-block;
 		vertical-align: middle;
-		transform: perspective(1px) translateZ(0);
-		box-shadow: 0 0 1px transparent;
+		transform: perspective(rem(1px)) translateZ(0);
+		box-shadow: 0 0 rem(1px) transparent;
 		transition-duration: 0.3s;
 		transition-property: transform;
 		transition-timing-function: ease-out;
-		transform: translateY(-8px);
+		transform: translateY(rem(-8px));
 		transition-duration: .5s;
 	}
 }

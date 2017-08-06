@@ -1,15 +1,26 @@
-/*components*/
-@import "components/_variables.scss";
+// colors
+$colsec1: #f9b43b;
+$colsec2: #2f3234;
+$btn: rgb(228, 80, 40);
+
+// resolutions
+$desktop: 1200px;
+$laptop: 992px;
+$tablets: 768px;
+$phones: 480px;
+
+// components
+@import "components/_media.scss";
 @import "components/_mixins.scss";
 
 
-/* layout */
+// layout
 @import "layout/fonts.scss";
 @import "layout/base.scss";
 @import "layout/_adjusment.scss";
 
 
-/* sections */
+// sections
 @import "sections/fixed-menu.scss";
 @import "sections/index.scss";
 @import "sections/best.scss";

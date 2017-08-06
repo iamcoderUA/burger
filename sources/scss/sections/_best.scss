@@ -1,7 +1,7 @@
 .best {
 	width: 100%;
 	height: 100vh;
-	min-height: 650px;
+	min-height: rem(650px);
 	background-image: url(../img/bg/bg-best.jpg);
 	background-repeat: no-repeat; 
 	background-position: center bottom;
@@ -18,18 +18,18 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	padding-top: 49px;
+	padding-top: rem(49px);
 }
 
 .best-content__title {
 	display: flex;
 	justify-content: center;
-	margin-bottom: 68px;
+	margin-bottom: rem(68px);
 }
 
 .best-content__text {
 	font-family: "Gagalin";
-	font-size: 72px;
+	font-size: rem(72px);
 	color: $colsec2;
 }
 
@@ -40,9 +40,9 @@
 }
 
 .advantages__item {
-	width: 300px;
+	width: rem(300px);
 	text-align: center;
-	margin-left: 20px;
+	margin-left: rem(20px);
 	&:first-child {
 		margin-left: 0;
 	}
@@ -51,7 +51,7 @@
 .advantages__image {
 	display: flex;
 	justify-content: center;
-	margin-bottom: 32px;
+	margin-bottom: rem(32px);
 }
 
 .advantages__image-pic {
@@ -61,15 +61,15 @@
 
 .advantages__title {
 	font-family: "Lifehack";
-	font-size: 24.1px;
-	line-height: 28.11px;	
+	font-size: rem(24.1px);
+	line-height: rem(28.11px);	
 	color: $colsec2;
-	margin-bottom: 12px;
+	margin-bottom: rem(12px);
 }
 
 .advantages__text {
-	font-size: 14px;
-	line-height: 24px;
-	padding: 0px 4px;
+	font-size: rem(14px);
+	line-height: rem(24px);
+	padding: rem(0px) rem(4px);
 }
 

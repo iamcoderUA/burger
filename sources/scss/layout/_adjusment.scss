@@ -2,12 +2,14 @@
   position: relative;
   width: 100%;
   min-height: 100%;
-  min-width: 940px + 20px;
+  // min-width: 940px + 20px;
+
   overflow: hidden;
 }
 
 .container {
-  width: 940px;
+  width: 95%;
+  max-width: 940px;
   margin: 0 auto;
   min-height: 650px;
 }

@@ -1,7 +1,7 @@
 .feed-page {
 	width: 100%;
 	height: 100vh;
-	min-height: 650px;
+	min-height: rem(650px);
 	
 	&__list {
 		width: 100%;
@@ -52,30 +52,30 @@
 }
 
 .feed-page__info {
-	padding: 44px 30px 0 20px;
-	font-size: 14px;
+	padding: rem(44px) rem(30px) 0 rem(20px);
+	font-size: rem(14px);
 }
 
 .feed-page__title {
 	font-family: "Gagalin";
 	text-transform: uppercase;
-	margin-bottom: 19px;
+	margin-bottom: rem(19px);
 }
 
 .feed-page__text {
-	line-height: 24px;
-	margin-bottom: 12px;
+	line-height: rem(24px);
+	margin-bottom: rem(12px);
 }
 
 .feed-page__btn {
 	display: inline-block;
-	width: 110px;
-	height: 35px;
+	width: rem(110px);
+	height: rem(35px);
 	font-family: "Ubuntu-Medium";
-	font-size: 13px;
+	font-size: rem(13px);
 	text-transform: uppercase;
 	color: transparent;
-	padding: 8px 15px;
-	border-radius: 5px;
+	padding: rem(8px) rem(15px);
+	border-radius: rem(5px);
 }
 
