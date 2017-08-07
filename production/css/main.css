@@ -279,7 +279,7 @@ body {
 
 @media screen and (max-width: 768px) {
   .header__logo {
-    margin-left: 0.625rem;
+    margin-top: 0.3125rem;
   }
 }
 
@@ -467,6 +467,13 @@ body {
   max-width: 100%;
 }
 
+@media screen and (max-width: 768px) {
+  .intro-cont__image {
+    max-width: 20.3125rem;
+    max-height: 20.3125rem;
+  }
+}
+
 .intro-content__right {
   padding-top: 2.375rem;
 }
@@ -494,6 +501,12 @@ body {
   margin-bottom: 0.875rem;
 }
 
+@media screen and (max-width: 768px) {
+  .intro-content__big {
+    font-size: 4.25rem;
+  }
+}
+
 .intro-content__small {
   font-family: "Lifehack";
   font-size: 3.9375rem;
@@ -515,8 +528,8 @@ body {
 
 @media screen and (max-width: 768px) {
   .next-page__image {
-    bottom: 4%;
     left: 48%;
+    width: 2rem;
   }
 }
 

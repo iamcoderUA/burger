@@ -32,7 +32,7 @@
 	margin-left: rem(-2px);
 
 	@include tablets() {
-		margin-left: rem(10px);
+		margin-top: rem(5px);
 	}
 }
 
@@ -138,7 +138,6 @@
 	}
 }
 
-
 .intro-content {
 	display: flex;
 	justify-content: center;
@@ -151,7 +150,6 @@
 		align-items: center;
 		text-align: center;
 		padding: 0 9% 18% 9%;
-
 	}
 }
 
@@ -164,14 +162,14 @@
 .intro-cont__image {
 	max-width: 100%;
 
-	// @include tablets() {
-	// 	max-width: rem(500px);
-	// 	max-height: rem(500px);
- //  }
+	@include tablets() {
+		max-width: rem(325px);
+		max-height: rem(325px);
+	}
 
  //  	@include phones() {
-	// 	max-width: rem(400px);
-	// 	max-height: rem(400px);
+	// 	max-width: rem(300px);
+	// 	max-height: rem(300px);
  //  }
 
 }
@@ -190,6 +188,10 @@
 .intro-content__big {
 	@extend %caption;
 	margin-bottom: rem(14px);
+
+	@include tablets() {
+		font-size: rem(68px);
+	}
 }
 
 .intro-content__small {
@@ -209,8 +211,8 @@
 	transition: .5s;
 
 	@include tablets() {
-		bottom: 4%;
 		left: 48%;
+		width: rem(32px);
 	}
 
 	&:hover {
