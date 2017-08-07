@@ -25,10 +25,10 @@
 	padding-top: rem(61px);
 
 	@include tablets() {
-		padding-top: rem(100px);
+		padding-top: rem(10px);
 	}
 	@include phones () {
-		padding-top: rem(60px);
+		padding-top: rem(40px);
 	}
 }
 
@@ -37,6 +37,10 @@
 	display: flex;
 	justify-content: center;
 	margin-bottom: rem(65px);
+
+	@include tablets() {
+		margin-bottom: rem(35px);
+	}
 
 	@include phones () {
 		text-align: center;
@@ -82,7 +86,7 @@
 	&:last-child {
 		margin-bottom: 0;
 	}
-		@include phones () {
+	@include phones () {
 		justify-content: center;
 	}
 }

@@ -167,10 +167,15 @@
 		max-height: rem(325px);
 	}
 
- //  	@include phones() {
-	// 	max-width: rem(300px);
-	// 	max-height: rem(300px);
- //  }
+	@include phones() {
+		max-width: rem(300px);
+		max-height: rem(300px);
+	}
+
+	@include vertical() {
+		max-width: rem(275px);
+		max-height: rem(275px);
+	}
 
 }
 
@@ -191,6 +196,7 @@
 
 	@include tablets() {
 		font-size: rem(68px);
+		margin-bottom: rem(0px);
 	}
 }
 
@@ -199,6 +205,11 @@
 	font-size: rem(63px);
 	line-height: rem(60px);
 	color: #FFF;
+
+	@include vertical() {
+		font-size: rem(58px);
+		line-height: rem(50px);
+	}
 }
 
 .next-page__image {
@@ -212,7 +223,8 @@
 
 	@include tablets() {
 		left: 48%;
-		width: rem(32px);
+		width: rem(40px);
+		height: rem(22px);
 	}
 
 	&:hover {

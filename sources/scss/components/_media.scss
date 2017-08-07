@@ -13,3 +13,9 @@
 		@content;
 	}
 }
+
+@mixin vertical {
+	@media screen and (max-width: $phones) {
+		@content;
+	}
+}

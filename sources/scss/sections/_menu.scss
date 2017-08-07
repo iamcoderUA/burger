@@ -11,25 +11,34 @@
 	display: flex;
 	justify-content: space-between;
 
-	@include tablets() {
-		background-image: url(../img/bg/tablets/bg-menu.jpg);
+	@include vertical() {
+		justify-content: flex-end;
 	}
 }
+
 
 .menu-title {
 	@extend %caption;
 	color: #FFF;
 	padding-top: rem(82px);
 	padding-left: rem(95px);
+
 	@include tablets() {
-		padding-top: rem(90px);
+		padding-top: rem(50px);
 		padding-left: rem(24px);
 	}
 
 	@include phones() {
-		font-size: rem(60px);
+		font-size: rem(80px);
 		padding-top: rem(50px);
-		padding-left: rem(74px);
+		padding-left: rem(24px);
+	}
+
+	@include vertical() {
+		position: absolute;
+		top: 2%;
+		left: 2%;
+		z-index: 0;
 	}
 }
 
@@ -57,10 +66,14 @@
 	}
 
 	@include tablets() {
-		width: rem(85px);
+		width: rem(62px);
 		height: 100%;
 		align-items: flex-end;
 		padding-bottom: 130px;
+
+		@include phones() {
+			width: rem(42px);
+		}
 	}
 }
 
@@ -70,6 +83,14 @@
 		width: rem(540px);
 		height: 100%;
 		transition: 0.5s;
+
+		@include tablets() {
+			width: rem(350px);
+		}
+
+		@include vertical() {
+			width: 100%;
+		}
 	}
 	&:hover .menu-list__text {
 		opacity: 1;
@@ -84,6 +105,10 @@
 	color: #fff;
 	white-space: nowrap;
 	transform: rotate(-90deg);
+
+	@include phones() {
+		font-size: rem(48px);
+	}
 }
 
 .menu-list__description {
@@ -91,6 +116,10 @@
 	overflow: hidden;
 	background-color: rgba(47, 50, 52, .929);
 	transition: 0.5s;
+
+	@include vertical() {
+		z-index: 100;
+	}
 }
 
 .menu-list__text {
@@ -102,6 +131,15 @@
 	padding: rem(60px) rem(36px) rem(60px) rem(33px);
 	opacity: 0;
 	transition: 0.3s;
+
+	@include tablets() {
+		font-size: rem(12px);
+	}
+
+	@include vertical() {
+		padding: rem(60px) rem(15px) rem(60px) rem(15px);
+		z-index: 100;
+	}
 }
 
 

@@ -48,6 +48,9 @@
 	@include cover;
 	filter: grayscale(1);
 
+	@include tablets() {
+		background-position: 50% 30%;
+	}
 }
 
 .feed-page__layer {
@@ -67,7 +70,7 @@
 
 	@include tablets() {
 		text-align: center;
-		padding: rem(33px) rem(65px) 0 rem(65px);
+		padding: rem(13px) rem(15px) rem(10px) rem(15px);
 	}
 
 	@include phones() {
@@ -98,8 +101,9 @@
 	margin-bottom: rem(12px);
 
 	@include tablets() {
-		margin-bottom: rem(25px);
+		margin-bottom: rem(10px);
 		line-height: rem(26px);
+		font-size: rem(12px);
 	}
 	@include phones() {
 		display: none;
