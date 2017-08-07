@@ -30,6 +30,10 @@
 	width: rem(92px);
 	height: rem(69px);
 	margin-left: rem(-2px);
+
+	@include tablets() {
+		margin-left: rem(10px);
+	}
 }
 
 .nav-menu {
@@ -55,6 +59,10 @@
 	&:first-child {
 		list-style-type: none;
 		margin-left: 0;
+	}
+
+	@include tablets() {
+		display: none;
 	}
 }
 
@@ -93,23 +101,24 @@
 }
 
 .hamburger-menu {
-  display: flex;
+	display: flex;
 	align-items: center;
 	position: relative;
-	width: 24px;
-	height: 24px;
-	margin-left: 30px;
-  display: none;
+	width: rem(24px);
+	height: rem(24px);
+	margin-left: rem(30px);
+	margin-right: rem(14px);
+	display: none;
 
-  @include tablets() {
-    display: flex;
-  }
+	@include tablets() {
+		display: flex;
+	}
 }
 
 .hamburger-menu__bars {
 	&, &:before, &:after {
 		background: #fff;
-		width: rem(24px);
+		width: 100%;
 		height: rem(4px);
 		border-radius: rem(3px);
 	}
@@ -135,6 +144,15 @@
 	justify-content: center;
 	align-items: center;
 	padding-bottom: 15%;
+
+	@include tablets() {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		padding: 0 9% 18% 9%;
+
+	}
 }
 
 .intro-content__left {
@@ -143,8 +161,30 @@
 	padding-left: rem(16px);
 }
 
+.intro-cont__image {
+	max-width: 100%;
+
+	// @include tablets() {
+	// 	max-width: rem(500px);
+	// 	max-height: rem(500px);
+ //  }
+
+ //  	@include phones() {
+	// 	max-width: rem(400px);
+	// 	max-height: rem(400px);
+ //  }
+
+}
+
 .intro-content__right {
 	padding-top: rem(38px);
+
+	@include tablets() {
+		padding-top: 0;
+		display: flex;
+		flex-flow: column;
+		align-items: center;
+	}
 }
 
 .intro-content__big {
@@ -167,6 +207,12 @@
 	bottom: 6%;
 	left: 49%;
 	transition: .5s;
+
+	@include tablets() {
+		bottom: 4%;
+		left: 48%;
+	}
+
 	&:hover {
 		display: inline-block;
 		vertical-align: middle;

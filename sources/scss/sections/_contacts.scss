@@ -12,15 +12,24 @@
 	background-size: cover;
 	position: relative;
 	height: calc(100% - 58px);
+
+	@include phones {
+		height: calc(100% - 14.5%);
+	}
 }
 
 .footer {
 	background-image: url(../img/bg/bg-footer.png);
 	background-position: center;
 	width: 100%;
-	height: rem(58px);
+	height: 14.5%;
 	padding-top: rem(7px);
 	padding-bottom: rem(9px);
+
+	@include phones {
+		padding-top: rem(23px);
+
+	}
 }
 
 .footer-container {
@@ -28,10 +37,26 @@
 	justify-content: space-between;
 	width: rem(940px);
 	margin: 0 auto;
+	
+	@include tablets() {
+		width: rem(768px);
+	}
+
+	@include phones() {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: rem(480px);
+	}
 }
 
 .footer-left {
 	font-size: rem(14px);
+
+	@include phones {
+		text-align: center;
+		margin-bottom: rem(20px);
+	}
 }
 
 .footer-left__adress {
@@ -56,7 +81,6 @@
 	display: inline-block;
 	padding-left: rem(5px);
 }
-
 
 .footer-right {
 	display: flex;
@@ -85,4 +109,9 @@
 .socials__icon {
 	width: rem(20px);
 	height: rem(20px);
+
+	@include phones() {
+		width: rem(25px);
+		height: rem(25px);
+	}
 }

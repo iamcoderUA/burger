@@ -10,6 +10,10 @@
 	position: relative;
 	display: flex;
 	justify-content: space-between;
+
+	@include tablets() {
+		background-image: url(../img/bg/tablets/bg-menu.jpg);
+	}
 }
 
 .menu-title {
@@ -17,6 +21,16 @@
 	color: #FFF;
 	padding-top: rem(82px);
 	padding-left: rem(95px);
+	@include tablets() {
+		padding-top: rem(90px);
+		padding-left: rem(24px);
+	}
+
+	@include phones() {
+		font-size: rem(60px);
+		padding-top: rem(50px);
+		padding-left: rem(74px);
+	}
 }
 
 .menu-list {
@@ -41,16 +55,23 @@
 		right: 0;
 		background-color: rgba(47, 50, 52, 0.6);
 	}
+
+	@include tablets() {
+		width: rem(85px);
+		height: 100%;
+		align-items: flex-end;
+		padding-bottom: 130px;
+	}
 }
 
 .menu-list__item.active {
 	display: flex;
-	& .menu-list__description {
+	&:hover .menu-list__description {
 		width: rem(540px);
 		height: 100%;
 		transition: 0.5s;
 	}
-	& .menu-list__text {
+	&:hover .menu-list__text {
 		opacity: 1;
 		transition: .7s;
 		transition-delay: .4s;

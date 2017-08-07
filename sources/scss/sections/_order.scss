@@ -12,6 +12,10 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+
+	@include tablets() {
+		justify-content: flex-start;
+	}
 }
 
 .order-content {
@@ -19,6 +23,13 @@
 	flex-direction: column;
 	justify-content: center;
 	padding-top: rem(61px);
+
+	@include tablets() {
+		padding-top: rem(100px);
+	}
+	@include phones () {
+		padding-top: rem(60px);
+	}
 }
 
 .order-title {
@@ -26,11 +37,30 @@
 	display: flex;
 	justify-content: center;
 	margin-bottom: rem(65px);
+
+	@include phones () {
+		text-align: center;
+		padding: 0 30px;
+		font-size: rem(60px);
+		line-height: rem(78px);
+		padding: 0 30px;
+		margin-bottom: rem(30px);
+	}
 }
 
 .order-form {
 	width: 100%;
 	display: flex;
+
+	@include tablets() {
+		flex-direction: column;
+		align-items: center;
+		padding: 0 130px;
+	}
+
+	@include phones () {
+		padding: 0;
+	}
 }
 
 .order-form__column {
@@ -39,6 +69,11 @@
 	&:first-child {
 		margin-left: 0;
 	}
+	@include tablets() {
+		width: 100%;
+		margin-left: rem(0px);
+		margin-bottom: rem(17px);
+	}
 } 
 
 .order-form__row {
@@ -46,6 +81,9 @@
 	margin-bottom: rem(17px);
 	&:last-child {
 		margin-bottom: 0;
+	}
+		@include phones () {
+		justify-content: center;
 	}
 }
 
@@ -56,6 +94,10 @@
 	&:first-child {
 		margin-left: 0;
 	}
+
+	@include tablets() {
+		width: 100%;
+	}
 }
 
 .order-form__field-title {
@@ -63,6 +105,10 @@
 	font-size: rem(14px);
 	color: #fff;
 	margin-bottom: rem(3px);
+
+	@include tablets() {
+		margin-bottom: rem(9px);
+	}
 }
 
 .order-form__input {
@@ -76,6 +122,13 @@
 
 .order-form__row-textarea {
 	margin-bottom: rem(13px);
+
+	@include tablets() {
+		width: 100%;
+	}
+	@include phones () {
+		margin-bottom: rem(40px);
+	}
 }
 
 .order-form__comments-textarea {

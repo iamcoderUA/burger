@@ -11,6 +11,10 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+
+	@include tablets() {
+		background-image: url(../img/bg/tablets/bg-best.jpg);
+	}
 }
 
 .best-content {
@@ -22,9 +26,11 @@
 }
 
 .best-content__title {
-	display: flex;
-	justify-content: center;
 	margin-bottom: rem(68px);
+
+	@include tablets() {
+		margin-bottom: rem(88px);
+	}
 }
 
 .best-content__text {
@@ -43,6 +49,12 @@
 	width: rem(300px);
 	text-align: center;
 	margin-left: rem(20px);
+
+	@include tablets() {
+		width: rem(270px);
+		margin-left: rem(5px);
+	}
+
 	&:first-child {
 		margin-left: 0;
 	}
