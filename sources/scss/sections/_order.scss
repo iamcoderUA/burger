@@ -30,6 +30,9 @@
 	@include phones () {
 		padding-top: rem(40px);
 	}
+	@include vertical() {
+		padding-top: rem(0px);
+	}
 }
 
 .order-title {

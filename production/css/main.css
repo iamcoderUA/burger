@@ -1508,6 +1508,12 @@ body {
   }
 }
 
+@media screen and (max-width: 480px) {
+  .order-content {
+    padding-top: 0rem;
+  }
+}
+
 .order-title {
   display: -webkit-box;
   display: -webkit-flex;
