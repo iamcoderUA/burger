@@ -53,6 +53,11 @@
 		padding: 0 30px;
 		margin-bottom: rem(30px);
 	}
+		@include vertical() {
+		font-size: rem(50px);
+		line-height: rem(58px);
+
+	}
 }
 
 .order-form {

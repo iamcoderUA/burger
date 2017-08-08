@@ -38,6 +38,12 @@
 
 .nav-menu {
 	display: flex;
+	flex: 1;
+	justify-content: flex-end;
+
+	@include tablets() {
+		display: none;
+	}
 	&__list {
 		display: flex;
 		align-items: center;
@@ -59,10 +65,6 @@
 	&:first-child {
 		list-style-type: none;
 		margin-left: 0;
-	}
-
-	@include tablets() {
-		display: none;
 	}
 }
 
@@ -150,6 +152,10 @@
 		align-items: center;
 		text-align: center;
 		padding: 0 9% 18% 9%;
+	}
+
+	@include vertical() {
+		padding: 0 9% 30% 9%;
 	}
 }
 

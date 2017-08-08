@@ -26,9 +26,11 @@
 	padding-top: rem(7px);
 	padding-bottom: rem(9px);
 
-	@include phones {
+	@include phones() {
 		padding-top: rem(23px);
-
+	}
+	@include vertical() {
+		padding-top: rem(10px);
 	}
 }
 
