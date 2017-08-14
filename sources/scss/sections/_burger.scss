@@ -6,4 +6,314 @@
 	background-image: -moz-linear-gradient( 90deg, rgb(249,180,59) 0%, rgb(235,140,56) 48%, rgb(249,180,59) 74%);
 	background-image: -webkit-linear-gradient( 90deg, rgb(249,180,59) 0%, rgb(235,140,56) 48%, rgb(249,180,59) 74%);
 	background-image: -ms-linear-gradient( 90deg, rgb(249,180,59) 0%, rgb(235,140,56) 48%, rgb(249,180,59) 74%);
+	display: flex; 
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
+
+.burger-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.burger-content {
+	display: flex; 
+	justify-content: center;
+	align-items: center;
+	position: relative;
+}
+
+.burger-content__prev,.burger-content__next {
+	width: rem(70px);
+	height: rem(30px);
+	display: block;
+
+	&-icon {
+		width: 100%;
+		height: 100%;
+		fill: #fff;
+		cursor: pointer;
+		opacity: 0.7;
+		&:hover {
+			opacity: 1;
+		}
+	}
+}
+
+.burger-content__prev-icon {
+	transform: rotate(90deg);
+	&:hover {
+		transform: scale(1.2) rotate(90deg);
+	}
+}
+
+.burger-content__next-icon {
+	transform: rotate(270deg);
+	&:hover {
+		transform: scale(1.2) rotate(270deg);
+	}
+}
+
+.burger-content__item {
+	display: flex;
+	position: relative;
+	padding-bottom: rem(88px);
+
+	@include tablets {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding-bottom: 0;
+		padding-top: rem(30px);
+	}
+}
+
+.burger-content__left, .burger-content__right {
+	flex: 1;
+
+	@include tablets {
+		width: 85%;
+		text-align: center;
+	}
+}
+
+.burger-content__left {
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+
+	@include tablets {
+		margin-bottom: rem(20px);
+	}
+
+	@include phones {
+		margin-bottom: rem(5px);
+	}
+}
+
+.burger-content__img {
+	max-width: 100%;
+
+	@include tablets {
+		width: 75%;
+	}
+
+	@include phones {
+		width: 90%;
+	}
+}
+
+.burger-content__title {
+	font-family: "Gagalin";
+	font-size: 72px;
+	color: #fff;
+	line-height: rem(65px);
+	margin-bottom: rem(40px);
+
+	@include tablets {
+		font-size: 62px;
+		line-height: rem(60px);
+		padding: 0 7%;
+		margin-bottom: rem(15px);
+	}
+
+	@include phones {
+		font-size: rem(50px);
+		margin-bottom: rem(10px);
+		line-height: 1;
+	}
+}
+
+.burger-content__text {
+	color: #fff;
+	font-size: 14px;
+	margin-bottom: rem(20px);
+	line-height: rem(24px);
+	padding-right: rem(10px);
+
+	@include tablets {
+		margin-bottom: rem(10px);
+	}
+}
+
+.burger-content__order {
+	display: flex;
+	align-items: flex-end;
+
+	@include tablets {
+		justify-content: center;
+	}
+}
+
+.order-info {
+	line-height: 1;
+	margin-right: rem(30px);
+}
+
+.order-info__amount {
+	display: inline-block;
+	font-family: "Gagalin";
+	font-size: rem(72px);
+	color: #e35028;
+
+	@include phones {
+		font-size: rem(50px);
+	}
+}
+
+.order-info__currency {
+	display: inline-block;
+	font-family: "Gagalin";
+	font-size: rem(30px);
+	color: #e35028;
+
+	@include phones {
+		font-size: rem(24px);
+	}
+}
+
+.burger-ingreds {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: rem(90px);
+	height: rem(90px);
+	background-color: rgba(230,75,45,.4);
+	border-radius: rem(5px);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	cursor: pointer;
+
+	@include tablets {
+		top: rem(30px);
+	}
+
+	@include vertical {
+		width: rem(60px);
+		height: rem(60px);
+	}
+
+	&:hover {
+		background-color: rgba(227,80,40,.7);
+		transition: 0.3s;
+
+		.burger-ingreds__dropout {
+			width: rem(270px);
+			height: rem(330px);
+			padding: rem(25px);
+			transition: 0.3s;
+
+			@include phones {
+				padding: rem(15px);
+			}
+
+			@include vertical {
+				width: rem(230px);
+				height: rem(330px);
+			}
+		}
+
+		.burger-ingreds__table {
+			transform: scale(1);
+			transition: .3s;
+			transition-delay: 0.1s;
+		}
+	}
+}
+
+.burger-ingreds__img {
+	width: 100%;
+	height: 50%;
+	fill: #fff;
+}
+
+.burger-ingreds__text {
+	font-family: "Gagalin";
+	font-size: rem(14px);
+	color: #fff;
+	text-align: center;
+}
+
+.burger-ingreds__dropout {
+	position: absolute;
+	top: 0;
+	left: rem(90px);
+	width: 0;
+	height: 0;
+	background-color: #fff;
+	border-radius: rem(5px);
+	opacity: .92;
+	transition: 0.3s;
+	
+	@include phones {
+		left: rem(60px);
+	}
+}
+
+.burger-ingreds__table {
+	width: 100%;
+	height: 100%;
+	border-collapse: collapse;
+	font-family: "Ubuntu-Medium";
+	transform: scale(0);
+
+	&-cell:last-child {
+		text-align: right;
+	}
+}
+
+.burger-kcal {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: rem(65px);
+	height: rem(90px);
+	opacity: 0.5;
+	display: flex;
+	flex-direction: column;
+	font-family: Gagalin;
+
+	@include tablets {
+		top: rem(30px);
+		right: 0;
+		left: auto;
+	}
+
+	@include phones {
+		width: rem(55px);
+		height: rem(75px);
+	}
+
+	&__img {
+		position: relative;
+		width: 100%;
+		height: 80%;
+		fill: #fff;
+	}
+}
+
+.burger-kcal__amount {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	font-size: rem(20px);
+	line-height: rem(16px);
+	color: #fff;
+	margin-left: -25%;
+	margin-top: -15%;
+
+	@include phones {
+		margin-left: -29%;
+	}
+}
+
+.burger-kcal__text{
+	font-size: rem(20px);
+	line-height: rem(16px);
+	color: #fff;
+	text-align: center;
+}
+

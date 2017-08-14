@@ -25,11 +25,11 @@
 	padding-top: rem(61px);
 
 	@include tablets() {
+		text-align: center;
 		padding-top: rem(10px);
+		align-items: center;
 	}
-	@include phones () {
-		padding-top: rem(40px);
-	}
+	
 	@include vertical() {
 		padding-top: rem(0px);
 	}
@@ -47,13 +47,13 @@
 
 	@include phones () {
 		text-align: center;
-		padding: 0 30px;
+		padding: 10px 30px 0 30px;
 		font-size: rem(60px);
 		line-height: rem(78px);
-		padding: 0 30px;
 		margin-bottom: rem(30px);
 	}
-		@include vertical() {
+
+	@include vertical() {
 		font-size: rem(50px);
 		line-height: rem(58px);
 
@@ -67,7 +67,7 @@
 	@include tablets() {
 		flex-direction: column;
 		align-items: center;
-		padding: 0 130px;
+		max-width: rem(455px);
 	}
 
 	@include phones () {
@@ -141,9 +141,13 @@
 	@include phones () {
 		margin-bottom: rem(40px);
 	}
+
+	@include vertical () {
+		margin-bottom: rem(30px);
+	}
 }
 
-.order-form__comments-textarea {
+.order-form__feed-area {
 	width: 100%;
 	height: rem(110px);
 	border: rem(1px) solid transparent;
@@ -252,9 +256,13 @@
 	padding-left: 0;
 	padding-right: 0;
 	text-transform: none;
+	margin-right: 0;
+	padding: rem(10px) rem(15px);
 	background: transparent;
 	&:hover {
-		background: transparent;
+		background: #fff;
+		color: black;
+		padding: rem(10px) rem(15px);
 	}
 }
 

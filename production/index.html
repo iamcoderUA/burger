@@ -41,12 +41,12 @@
                 </li>
               </ul>
             </nav>
-            <div class="nav-menu__btn">
-                <a class="order-btn" href="#">заказать</a>
-                <a class="hamburger-menu" href="">
-                  <div class="hamburger-menu__bars"></div>
-                </a>
-              </div>
+            <div class="header__btn">
+              <a class="order-btn" href="#">заказать</a>
+              <a class="hamb-menu" href="">
+                <div class="hamb-menu__bars"></div>
+              </a>
+            </div>
           </header>
           <div class="intro-content">
             <div class="intro-content__left">
@@ -111,6 +111,98 @@
       </section>
 
       <section class="burger">
+        <div class="container burger-container">
+          <div class="burger-content">
+            <a class="burger-content__prev">
+              <svg class="burger-content__prev-icon">
+                <use xlink:href="img/icons/sprite/sprite.svg#arrow-scroll"></use>
+              </svg>
+            </a>
+            <ul class="burger-content__list">
+              <li class="burger-content__item">
+                <div class="burger-ingreds">
+                  <svg class="burger-ingreds__img">
+                    <use xlink:href="img/icons/sprite/sprite.svg#burger"></use>
+                  </svg>
+                  <div class="burger-ingreds__text">Состав</div>
+                  <div class="burger-ingreds__dropout">
+                    <table class="burger-ingreds__table">
+                      <tr class="burger-ingreds__table-row">
+                        <td class="burger-ingreds__table-cell">
+                          <img class="burger-ingreds__table-icon" src="img/icons/beef.svg" alt="">
+                        </td>
+                        <td class="burger-ingreds__table-cell">Говядина</td>
+                        <td class="burger-ingreds__table-cell">300г</td>
+                      </tr>
+                      <tr class="burger-ingreds__table-row">
+                        <td class="burger-ingreds__table-cell">
+                          <img class="burger-ingreds__table-icon" src="img/icons/buns.svg" alt="">
+                        </td>
+                        <td class="burger-ingreds__table-cell">Булочки</td>
+                        <td class="burger-ingreds__table-cell">100г</td>
+                      </tr>
+                      <tr class="burger-ingreds__table-row">
+                        <td class="burger-ingreds__table-cell">
+                          <img class="burger-ingreds__table-icon" src="img/icons/salad.svg" alt="">
+                        </td>
+                        <td class="burger-ingreds__table-cell">Зелень</td>
+                        <td class="burger-ingreds__table-cell">70г</td>
+                      </tr>
+                      <tr class="burger-ingreds__table-row">
+                        <td class="burger-ingreds__table-cell">
+                          <img class="burger-ingreds__table-icon" src="img/icons/sauce.svg" alt="">
+                        </td>
+                        <td class="burger-ingreds__table-cell">Соус</td>
+                        <td class="burger-ingreds__table-cell">150г</td>
+                      </tr>
+                      <tr class="burger-ingreds__table-row">
+                        <td class="burger-ingreds__table-cell">
+                          <img class="burger-ingreds__table-icon" src="img/icons/cucumber.svg" alt="">
+                        </td>
+                        <td class="burger-ingreds__table-cell">Овощи</td>
+                        <td class="burger-ingreds__table-cell">200г</td>
+                      </tr>
+                      <tr class="burger-ingreds__table-row">
+                        <td class="burger-ingreds__table-cell">
+                          <img class="burger-ingreds__table-icon" src="img/icons/cheese.svg" alt="">
+                        </td>
+                        <td class="burger-ingreds__table-cell">Сыр</td>
+                        <td class="burger-ingreds__table-cell">80г</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+                <div class="burger-kcal">
+                  <svg class="burger-kcal__img">
+                    <use xlink:href="img/icons/sprite/sprite.svg#kkal"></use>
+                  </svg>
+                  <div class="burger-kcal__amount">1200</div>
+                  <div class="burger-kcal__text">ккал</div>
+                </div>
+                <div class="burger-content__left">
+                  <img class="burger-content__img" src="img/content/black_burger.png" alt="Delicious Burger">
+                </div>
+                <div class="burger-content__right">
+                  <div class="burger-content__title">Dark Beef Burger</div>
+                  <div class="burger-content__text">Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
+                  </div>
+                  <div class="burger-content__order">
+                    <div class="order-info">
+                      <div class="order-info__amount">500</div>
+                      <div class="order-info__currency">рублей</div>
+                    </div>
+                    <a class="order-btn" href="#">Заказать</a>
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <a class="burger-content__next">
+              <svg class="burger-content__next-icon">
+                <use xlink:href="img/icons/sprite/sprite.svg#arrow-scroll"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
       </section>
 
       <section class="team">
@@ -193,7 +285,7 @@
         <h4 class="menu-title">меню</h4>
         <ul class="menu-list">
           <li class="menu-list__item active">
-            <div class="menu-list__img" style="background-image: url(img/content/stripe-1.jpg);">
+            <div class="menu-list__link" style="background-image: url(img/content/stripe-1.jpg);">
               <span class="menu-list__title">для мясоедов</span>
             </div>
             <div class="menu-list__description">
@@ -204,7 +296,7 @@
             </div>
           </li>
           <li class="menu-list__item">
-            <div class="menu-list__img" style="background-image: url(img/content/stripe-2.jpg);">
+            <div class="menu-list__link" style="background-image: url(img/content/stripe-2.jpg);">
               <span class="menu-list__title">вегетарианское</span>
             </div>
             <div class="menu-list__description">
@@ -215,7 +307,7 @@
             </div>
           </li>
           <li class="menu-list__item">
-            <div class="menu-list__img" style="background-image: url(img/content/stripe-3.jpg);">
+            <div class="menu-list__link" style="background-image: url(img/content/stripe-3.jpg);">
               <span class="menu-list__title">диетическое</span>
             </div>
             <div class="menu-list__description">
@@ -363,35 +455,35 @@
                   <div class="order-form__row">
                     <label class="order-form__cell">
                       <span class="order-form__field-title">Имя</span>
-                      <input name="name" type="text" class="order-form__input">
+                      <input class="order-form__input" name="name" type="text">
                     </label>
                     <label class="order-form__cell">
                       <span class="order-form__field-title">Телефон</span>
-                      <input name="phone" type="text" class="order-form__input">
+                      <input class="order-form__input" name="phone" type="text">
                     </label>
                   </div>
                   <div class="order-form__row">
                     <label class="order-form__cell">
                       <span class="order-form__field-title">Улица</span>
-                      <input name="street" type="text" class="order-form__input">
+                      <input class="order-form__input" name="street" type="text">
                     </label>
                   </div>
                   <div class="order-form__row">
                     <label class="order-form__cell">
                       <span class="order-form__field-title">Дом</span>
-                      <input name="bld" type="text" class="order-form__input">
+                      <input class="order-form__input" name="bld" type="text">
                     </label>
                     <label class="order-form__cell">
                       <span class="order-form__field-title">Корпус</span>
-                      <input name="part" type="text" class="order-form__input">
+                      <input class="order-form__input" name="part" type="text">
                     </label>
                     <label class="order-form__cell">
                       <span class="order-form__field-title">Квартира</span>
-                      <input name="appt" type="text" class="order-form__input">
+                      <input class="order-form__input" name="appt" type="text">
                     </label>
                     <label class="order-form__cell">
                       <span class="order-form__field-title">Этаж</span>
-                      <input name="floor" type="text" class="order-form__input">
+                      <input class="order-form__input" name="floor" type="text">
                     </label>
                   </div>
                 </div>
@@ -401,7 +493,7 @@
                       <span class="order-form__field-title">
                         Комментарий
                       </span>
-                      <textarea name="comment" class="order-form__comments-textarea"></textarea>
+                      <textarea class="order-form__feed-area" name="comment"></textarea>
                     </label>
                   </div>
                   <div class="order-form__buttons">
@@ -446,7 +538,7 @@
                 Санкт-Петербург, ул.Бабушкина, д.12/1, 15
               </div>
               <a class="footer-left__phone" href="tel:+78123771377">
-                <svg class="footer-left__phone-icon" style="fill: #e45028">
+                <svg class="footer-left__phone-icon">
                   <use xlink:href="img/icons/sprite/sprite.svg#phone"></use>
                 </svg>
                 <span class="footer-left__phone-text">+7 (812) 377-13-77</span> 
@@ -456,28 +548,28 @@
               <ul class="socials">
                 <li class="socials__item">
                   <a href="" class="socials__link">
-                    <svg class="socials__icon" style="fill: #fff">
+                    <svg class="socials__icon">
                       <use xlink:href="img/icons/sprite/sprite.svg#vk"></use>
                     </svg>
                   </a>
                 </li>
                 <li class="socials__item">
                   <a href="" class="socials__link">
-                    <svg class="socials__icon" style="fill: #fff">
+                    <svg class="socials__icon">
                       <use xlink:href="img/icons/sprite/sprite.svg#fb"></use>
                     </svg>
                   </a>
                 </li>
                 <li class="socials__item">
                   <a href="" class="socials__link">
-                    <svg class="socials__icon" style="fill: #fff">
+                    <svg class="socials__icon">
                       <use xlink:href="img/icons/sprite/sprite.svg#inst"></use>
                     </svg>
                   </a>
                 </li>
                 <li class="socials__item">
                   <a href="" class="socials__link">
-                    <svg class="socials__icon" style="fill: #fff">
+                    <svg class="socials__icon">
                       <use xlink:href="img/icons/sprite/sprite.svg#twitter"></use>
                     </svg>
                   </a>
@@ -488,35 +580,68 @@
         </footer>
       </section>
 
-      <ul class="fixed-menu">
-        <li class="fixed-menu__item fixed-menu__item_active">
-          <a href="0" class="fixed-menu__link"></a>
-        </li>
-        <li class="fixed-menu__item">
-          <a href="1" class="fixed-menu__link"></a>
-        </li>
-        <li class="fixed-menu__item">
-          <a href="2" class="fixed-menu__link"></a>
-        </li>
-        <li class="fixed-menu__item">
-          <a href="3" class="fixed-menu__link"></a>
-        </li>
-        <li class="fixed-menu__item">
-          <a href="4" class="fixed-menu__link"></a>
-        </li>
-        <li class="fixed-menu__item">
-          <a href="5" class="fixed-menu__link"></a>
-        </li>
-        <li class="fixed-menu__item">
-          <a href="6" class="fixed-menu__link"></a>
-        </li>
-        <li class="fixed-menu__item">
-          <a href="7" class="fixed-menu__link"></a>
-        </li>
-      </ul>
     </div>
+    <div class="hamburger-menu">
+      <a class="hamburger-menu__logo" href="#">
+        <img class="hamburger-menu__logo-icon" src="img/icons/logo.svg">
+      </a>
+      <a class="hamburger-menu__close" href="#">
+        <img class="hamburger-menu__close-icon" src="img/icons/red_cross3.png">
+      </a>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link" href="#">о нас</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">бургеры</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">команда</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">меню</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">отзывы</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">контакты</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <ul class="fixed-menu">
+      <li class="fixed-menu__item fixed-menu__item_active">
+        <a href="0" class="fixed-menu__link"></a>
+      </li>
+      <li class="fixed-menu__item">
+        <a href="1" class="fixed-menu__link"></a>
+      </li>
+      <li class="fixed-menu__item">
+        <a href="2" class="fixed-menu__link"></a>
+      </li>
+      <li class="fixed-menu__item">
+        <a href="3" class="fixed-menu__link"></a>
+      </li>
+      <li class="fixed-menu__item">
+        <a href="4" class="fixed-menu__link"></a>
+      </li>
+      <li class="fixed-menu__item">
+        <a href="5" class="fixed-menu__link"></a>
+      </li>
+      <li class="fixed-menu__item">
+        <a href="6" class="fixed-menu__link"></a>
+      </li>
+      <li class="fixed-menu__item">
+        <a href="7" class="fixed-menu__link"></a>
+      </li>
+    </ul>
   </div>
   <script src="js/svg4everybody/lib/svg4everybody.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="js/fullscreen.js"></script>
+
 </body>
 </html>
 

@@ -56,7 +56,6 @@
 			flex-direction: column;
 
 			justify-content: center;
-			// align-items: center;
 		}
 	}
 
@@ -71,7 +70,7 @@
 			transition: .7s;
 		}
 		&:hover .info-list__description {
-			transition: 2s all;
+			transition: .3s all;
 			height: 100%;
 			margin-bottom: rem(37px);
 

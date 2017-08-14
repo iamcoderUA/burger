@@ -37,11 +37,11 @@
 .footer-container {
 	display: flex;
 	justify-content: space-between;
-	width: rem(940px);
+	width: 85%;
 	margin: 0 auto;
 	
 	@include tablets() {
-		width: rem(768px);
+		width: 90%;
 	}
 
 	@include phones() {
@@ -74,6 +74,7 @@
 }
 
 .footer-left__phone-icon {
+	fill: #e45028;
 	display: inline-block;
 	vertical-align: middle;
 	width: rem(12px);
@@ -112,6 +113,7 @@
 .socials__icon {
 	width: rem(20px);
 	height: rem(20px);
+	fill: #fff;
 
 	@include phones() {
 		width: rem(25px);
