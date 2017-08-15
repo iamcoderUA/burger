@@ -286,6 +286,7 @@ body {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  display: none;
 }
 
 .nav__list {

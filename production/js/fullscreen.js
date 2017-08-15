@@ -3,20 +3,16 @@ $(document).ready(function() {
 	$('.hamb-menu').on('click', function(e) {
 		e.preventDefault();
 
-		$(e.target).closest('.maincontent').next('.hamburger-menu').addClass('active');
-		// fsMenuActive.fadeIn('fast/fast', function() {
-		// 	fsMenuActive.css('opacity', '1');
-		// });
-		// fsMenuActive.css('display', 'flex');
+		var fsMenuActive = $(e.target).closest('.maincontent').next('.hamburger-menu').addClass('active'),
+				navOpen =	fsMenuActive.find('.nav').addClass('active');
+				navOpen.slideDown(600);
 	});
 
 	$('.hamburger-menu__close').on('click', function(e) {
 		e.preventDefault();
 		
-		$(e.target).closest('.hamburger-menu').removeClass('active');
-		// fsMenuClose.fadeOut('100', function() {
-		// 	fsMenuClose.css('opacity', '0');
-		// });
-		// fsMenuClose.css('display', 'none');
+		var fsMenuClose = $(e.target).closest('.hamburger-menu').removeClass('active'),
+				navClose = fsMenuClose.find('.nav').removeClass('active');
+				navClose.slideUp(100);
 	});
 });
