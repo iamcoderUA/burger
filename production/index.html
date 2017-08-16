@@ -7,6 +7,7 @@
   <meta content="" name="keywords">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="IE=edge, chrome=1">
+  <link rel="stylesheet" href="js/fancybox/dist/jquery.fancybox.css">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/main.css">
   <title>Mr. Burger | Первый брутальный бургер</title>
@@ -332,7 +333,7 @@
                   <div class="feed-page__text">
                     Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
                   </div>
-                  <a class="feed-page__btn" href="#">подробнее</a>
+                  <a class="feed-page__btn" href="#" data-fancybox data-src="#review">подробнее</a>
                 </div>
               </div>
             </div>
@@ -347,7 +348,7 @@
                   <div class="feed-page__text">
                     Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
                   </div>
-                  <a class="feed-page__btn" href="#">подробнее</a>
+                  <a class="feed-page__btn" href="#" data-fancybox data-src="#review">подробнее</a>
                 </div>
               </div>
             </div>
@@ -362,7 +363,7 @@
                   <div class="feed-page__text">
                     Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
                   </div>
-                  <a class="feed-page__btn" href="#">подробнее</a>
+                  <a class="feed-page__btn" href="#" data-fancybox data-src="#review">подробнее</a>
                 </div>
               </div>
             </div>
@@ -377,7 +378,7 @@
                   <div class="feed-page__text">
                     Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
                   </div>
-                  <a class="feed-page__btn" href="#">подробнее</a>
+                  <a class="feed-page__btn" href="#" data-fancybox data-src="#review">подробнее</a>
                 </div>
               </div>
             </div>
@@ -392,7 +393,7 @@
                   <div class="feed-page__text">
                     Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
                   </div>
-                  <a class="feed-page__btn" href="#">подробнее</a>
+                  <a class="feed-page__btn" href="#" data-fancybox data-src="#review">подробнее</a>
                 </div>
               </div>
             </div>
@@ -407,7 +408,7 @@
                   <div class="feed-page__text">
                     Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
                   </div>
-                  <a class="feed-page__btn" href="#">подробнее</a>
+                  <a class="feed-page__btn" href="#" data-fancybox data-src="#review">подробнее</a>
                 </div>
               </div>
             </div>
@@ -422,7 +423,7 @@
                   <div class="feed-page__text">
                     Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
                   </div>
-                  <a class="feed-page__btn" href="#">подробнее</a>
+                  <a class="feed-page__btn" href="#" data-fancybox data-src="#review">подробнее</a>
                 </div>
               </div>
             </div>
@@ -437,7 +438,7 @@
                   <div class="feed-page__text">
                     Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким расплавленным.
                   </div>
-                  <a class="feed-page__btn" href="#">подробнее</a>
+                  <a class="feed-page__btn" href="#" data-fancybox data-src="#review">подробнее</a>
                 </div>
               </div>
             </div>
@@ -449,7 +450,7 @@
         <div class="container">
           <div class="order-content">
             <h5 class="order-title">Закажите доставку</h5>
-            <form method="post">
+            <form class="form" id="form" method="post">
               <div class="order-form">
                 <div class="order-form__column">
                   <div class="order-form__row">
@@ -517,7 +518,7 @@
                       </label> 
                     </div>
                     <div class="order-form__row">
-                      <input class="order-form__button" name="" type="submit" value="Заказать">
+                      <input class="order-form__button" name="" type="submit" value="Заказать" data-fancybox data-src="#success">
                       <input class="order-form__button order-form__button-reset" name="" type="reset" value="Очистить">
                     </div>
                   </div>
@@ -637,13 +638,39 @@
         <a href="7" class="fixed-menu__link"></a>
       </li>
     </ul>
+    <div class="review popup" id="review">
+      <a class="review__close" href="#">
+      </a>
+      <div class="review__content">
+        <div class="review__title">Константин Спилберг</div>
+        <div class="review__text">
+          Мысли все о них и о них, о них и о них. Нельзя устоять, невозможно забыть... Никогда не думал, что булочки могут быть такими
+          мягкими, котлетка такой сочной, а сыр таким расплавленным. Мысли все о них и о них, о них и о них. Нельзя устоять,
+          невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлетка такой сочной, а сыр таким
+          расплавленным.
+        </div>
+      </div>
+    </div>
+    <div class="form-popup popup" id="success">
+      <div class="form-popup__content">
+        <div class="form-popup__text">Сообщение отправлено</div>
+        <a class="form-popup__close order-btn" href="#">Закрыть</a>
+      </div>
+    </div>
+    <div class="form-popup popup" id="error">
+      <div class="form-popup__content">
+        <div class="form-popup__text error-message">Произошла ошибка</div>
+        <a class="form-popup__close order-btn" href="#">Закрыть</a>
+      </div>
+    </div>
   </div>
   <script src="js/svg4everybody/dist/svg4everybody.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="js/fancybox/dist/jquery.fancybox.min.js"></script>
   <script src="js/fullscreen.js"></script>
   <script src="js/acco_v.js"></script>
   <script src="js/acco_h.js"></script>
-
+  <script src="js/popup.js"></script>
 </body>
 </html>
 

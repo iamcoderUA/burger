@@ -76,7 +76,6 @@
 	@include phones() {
 		padding-top: rem(45px);
 	}
-
 }
 
 .feed-page__title {
@@ -93,7 +92,6 @@
 		margin-bottom: rem(35px);
 		line-height: rem(36px);
 	}
-
 }
 
 .feed-page__text {
@@ -102,13 +100,12 @@
 
 	@include tablets() {
 		margin-bottom: rem(10px);
-		line-height: rem(26px);
+		line-height: rem(20px);
 		font-size: rem(12px);
 	}
 	@include phones() {
 		display: none;
 	}
-
 }
 
 .feed-page__btn {

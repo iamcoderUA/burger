@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .intro-content__big, .info-title, .menu-title, .order-title {
   font-family: "Gagalin";
   font-size: 72px;
@@ -1979,7 +1980,7 @@ body {
 @media screen and (max-width: 768px) {
   .feed-page__text {
     margin-bottom: 0.625rem;
-    line-height: 1.625rem;
+    line-height: 1.25rem;
     font-size: 0.75rem;
   }
 }
@@ -2527,6 +2528,115 @@ body {
     width: 1.5625rem;
     height: 1.5625rem;
   }
+}
+
+.popup {
+  display: none;
+  max-width: 31.25rem;
+}
+
+@media screen and (max-width: 768px) {
+  .popup {
+    max-width: 400px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .popup {
+    max-width: 290px;
+  }
+}
+
+.review {
+  padding: 1.5625rem 1.25rem;
+  position: relative;
+}
+
+.review__title {
+  font-family: "Gagalin";
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  margin-bottom: 1.5625rem;
+}
+
+.review__text {
+  font-size: 0.875rem;
+  font-family: "Ubuntu-Light";
+}
+
+.review__close {
+  width: 0.9375rem;
+  height: 0.9375rem;
+  display: block;
+  position: absolute;
+  right: 1.25rem;
+  top: 1.25rem;
+  opacity: .7;
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+.review__close:hover {
+  opacity: 1;
+}
+
+.fancybox-close-small {
+  display: none;
+}
+
+.fancybox-close-small:after {
+  display: none;
+}
+
+.review__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 34px;
+  height: 34px;
+  background: transparent;
+}
+
+.review__close:after {
+  content: '×';
+  position: absolute;
+  top: 5px;
+  right: 30px;
+  width: 0px;
+  height: 0px;
+  font: 24px/36px Arial,"Helvetica Neue",Helvetica,sans-serif;
+  color: red;
+  font-weight: 300;
+  text-align: center;
+  border-radius: 50%;
+  border-width: 0;
+  opacity: .7;
+  -webkit-transition: .2s;
+  -o-transition: .2s;
+  transition: .2s;
+}
+
+.review__close:after:hover {
+  opacity: 1;
+}
+
+.form-popup {
+  width: 15rem;
+}
+
+.form-popup__content {
+  padding: 1.25rem;
+  text-align: center;
+}
+
+.form-popup__text {
+  margin-bottom: 1.25rem;
+  font-size: 0.875rem;
+}
+
+.error-message {
+  color: red;
 }
 
 /*# sourceMappingURL=main.css.map */
