@@ -1,0 +1,261 @@
+<html>
+      <head>
+        <meta charset="UTF-8">
+        <title>README.md</title>
+      </head>
+      <body>
+        <h1 id="svg-for-everybody">SVG for Everybody</h1>
+<p><a href="https://www.npmjs.com/package/svg4everybody"><img src="https://img.shields.io/npm/v/svg4everybody.svg" alt="NPM Version"></a> <a href="https://travis-ci.org/jonathantneal/svg4everybody"><img src="https://img.shields.io/travis/jonathantneal/svg4everybody.svg" alt="Build Status"></a></p>
+<p><a href="https://github.com/jonathantneal/svg4everybody">SVG for Everybody</a> adds <a href="http://css-tricks.com/svg-sprites-use-better-icon-fonts/##Browser+Support">SVG External Content</a> support to <a href="http://caniuse.com/svg">all browsers</a>.</p>
+<p>To use it now, include the script in your document.</p>
+<pre><code class="lang-html">&lt;script src=&quot;/path/to/svg4everybody.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;svg4everybody(); // run it now or whenever you are ready&lt;/script&gt;
+</code></pre>
+<p>To support Internet Explorer 6-8, include the legacy script instead.</p>
+<pre><code class="lang-html">&lt;script src=&quot;/path/to/svg4everybody.legacy.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;svg4everybody(); // run it now or whenever you are ready&lt;/script&gt;
+</code></pre>
+<p><em>As of v2.0.0, you must manually call <code>svg4everybody()</code>. If you are using an AMD/CommonJS dependency loader then you may call it within the callback closure.</em></p>
+<p>IE 6-8 require you to put the script in the <code>&lt;head&gt;</code> in order to shiv <code>&lt;svg&gt;</code> and <code>&lt;use&gt;</code> elements. For best results in IE, set <a href="http://www.modern.ie/en-us/performance/how-to-use-x-ua-compatible">X-UA-Compatible</a> to <code>ie=edge</code>. This can be done with a response header from the server or the following HTML in the <code>&lt;head&gt;</code>.</p>
+<pre><code class="lang-html">&lt;meta http-equiv=&quot;x-ua-compatible&quot; content=&quot;ie=edge&quot;&gt;
+</code></pre>
+<h2 id="usage">Usage</h2>
+<p>Create an SVG image.</p>
+<p><strong>map.svg:</strong></p>
+<pre><code class="lang-html">&lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot;&gt;
+    &lt;symbol id=&quot;codepen&quot; viewBox=&quot;0 0 64 64&quot;&gt;
+        &lt;title&gt;CodePen&lt;/title&gt;
+        &lt;path etc.../&gt;
+    &lt;/symbol&gt;
+    &lt;symbol id=&quot;youtube&quot; viewBox=&quot;0 0 64 64&quot;&gt;
+        &lt;title&gt;YouTube&lt;/title&gt;
+        &lt;path etc.../&gt;
+    &lt;/symbol&gt;
+    &lt;symbol id=&quot;twitter&quot; viewBox=&quot;0 0 64 64&quot;&gt;
+        &lt;title&gt;Twitter&lt;/title&gt;
+        &lt;path etc.../&gt;
+    &lt;/symbol&gt;
+&lt;/svg&gt;
+</code></pre>
+<p>This spritemap displays fine in <strong>Chrome</strong>, <strong>Safari 7.1+</strong>, <strong>Firefox</strong>, <strong>Edge 13+</strong>, <strong>Opera</strong>. <a href="https://github.com/jonathantneal/svg4everybody">SVG for Everybody</a> polyfills the experience in <strong>Safari 6</strong>, <strong>IE 6+</strong>, and <strong>Edge 12</strong>.</p>
+<pre><code class="lang-html">&lt;svg role=&quot;img&quot; title=&quot;CodePen&quot;&gt;
+    &lt;use xlink:href=&quot;map.svg#codepen&quot;/&gt;
+&lt;/svg&gt;
+&lt;svg role=&quot;img&quot; title=&quot;YouTube&quot;&gt;
+    &lt;use xlink:href=&quot;map.svg#youtube&quot;/&gt;
+&lt;/svg&gt;
+&lt;svg role=&quot;img&quot; title=&quot;Twitter&quot;&gt;
+    &lt;use xlink:href=&quot;map.svg#twitter&quot;/&gt;
+&lt;/svg&gt;
+</code></pre>
+<p><em>IE 6-8 requires a trailing slash <code>/</code> when using a self-closing <code>&lt;use/&gt;</code> element.</em></p>
+<p><img src="http://i.imgur.com/87Npdzn.png" alt="3 SVG logos"></p>
+<p>Browsers not supporting SVG fallback to images.</p>
+<pre><code class="lang-html">&lt;svg role=&quot;img&quot; title=&quot;CodePen&quot;&gt;
+    &lt;img src=&quot;map.svg.codepen.png&quot;&gt;
+&lt;/svg&gt;
+&lt;svg role=&quot;img&quot; title=&quot;YouTube&quot;&gt;
+    &lt;img src=&quot;map.svg.youtube.png&quot;&gt;
+&lt;/svg&gt;
+&lt;svg role=&quot;img&quot; title=&quot;Twitter&quot;&gt;
+    &lt;img src=&quot;map.svg.twitter.png&quot;&gt;
+&lt;/svg&gt;
+</code></pre>
+<p>By default, fallback images point to a PNG file in the same location as the SVG, only with the <code>#</code> hash replaced by a <code>.</code> dot and then appended with a <code>.png</code> extension. If you want to change this behavior, you can define your own fallback.</p>
+<pre><code class="lang-js">svg4everybody({
+    fallback: function (src, svg, use) {
+        // src: current xlink:href String 
+        // svg: current SVG Element 
+        // use: current USE Element 
+
+        return &#39;fallback.png&#39;; // ok, always return fallback.png
+    }
+});
+</code></pre>
+<p>All <code>&lt;use&gt;</code> elements that are descendants of an <code>&lt;svg&gt;</code> are checked for external content. If you want to change this behavior, you can define your own validator.</p>
+<pre><code class="lang-js">svg4everybody({
+    validate: function (src, svg, use) {
+        // src: current xlink:href String 
+        // svg: current SVG Element 
+        // use: current USE Element 
+
+        return true; // ok, everything is valid
+    }
+});
+</code></pre>
+<p>You can override whether the script polyfills External Content at all (<code>polyfill</code>), or whether SVG should even be used over fallback images (<code>nosvg</code>).</p>
+<pre><code class="lang-js">svg4everybody({
+    nosvg: true, // shiv &lt;svg&gt; and &lt;use&gt; elements and use image fallbacks
+    polyfill: true // polyfill &lt;use&gt; elements for External Content
+});
+</code></pre>
+<p><em>Use of the <code>nosvg</code> option will requires you to use the legacy version of SVG for Everybody.</em></p>
+<h2 id="implementation-status">Implementation status</h2>
+<p>Modern browsers support external content in SVGs, <em>except Edge</em>. No frets; we can shim it.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">OS</th>
+<th>Browser</th>
+<th style="text-align:center">SVG</th>
+<th style="text-align:center">External Content</th>
+<th style="text-align:center">Shimmed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">*</td>
+<td>Chrome 21+</td>
+<td style="text-align:center">✔</td>
+<td style="text-align:center">✔</td>
+<td style="text-align:center">—</td>
+</tr>
+<tr>
+<td style="text-align:center">*</td>
+<td>Chrome 14-20</td>
+<td style="text-align:center">✔</td>
+<td style="text-align:center">✖</td>
+<td style="text-align:center">✔</td>
+</tr>
+<tr>
+<td style="text-align:center">*</td>
+<td>Firefox 4+</td>
+<td style="text-align:center">✔</td>
+<td style="text-align:center">✔</td>
+<td style="text-align:center">—</td>
+</tr>
+<tr>
+<td style="text-align:center">*</td>
+<td>Opera 23+</td>
+<td style="text-align:center">✔</td>
+<td style="text-align:center">✔</td>
+<td style="text-align:center">—</td>
+</tr>
+<tr>
+<td style="text-align:center">*</td>
+<td>Opera Mini 8+</td>
+<td style="text-align:center">✔</td>
+<td style="text-align:center">✔</td>
+<td style="text-align:center">—</td>
+</tr>
+<tr>
+<td style="text-align:center">And</td>
+<td>And. Browser 40+</td>
+<td style="text-align:center">✔</td>
+<td style="text-align:center">✔</td>
+<td style="text-align:center">—</td>
+</tr>
+<tr>
+<td style="text-align:center">And</td>
+<td>And. Browser 4.1+</td>
+<td style="text-align:center">✔</td>
+<td style="text-align:center">✖</td>
+<td style="text-align:center">✔</td>
+</tr>
+<tr>
+<td style="text-align:center">iOS</td>
+<td>iOS 8.1+</td>
+<td style="text-align:center">✔</td>
+<td style="text-align:center">✔</td>
+<td style="text-align:center">—</td>
+</tr>
+<tr>
+<td style="text-align:center">iOS</td>
+<td>iOS 6-7</td>
+<td style="text-align:center">✔</td>
+<td style="text-align:center">✖</td>
+<td style="text-align:center">✔</td>
+</tr>
+<tr>
+<td style="text-align:center">OSX</td>
+<td>Saf 7.1+</td>
+<td style="text-align:center">✔</td>
+<td style="text-align:center">✔</td>
+<td style="text-align:center">—</td>
+</tr>
+<tr>
+<td style="text-align:center">OSX</td>
+<td>Saf 6</td>
+<td style="text-align:center">✔</td>
+<td style="text-align:center">✖</td>
+<td style="text-align:center">✔</td>
+</tr>
+<tr>
+<td style="text-align:center">Win</td>
+<td>Edge 13+</td>
+<td style="text-align:center">✔</td>
+<td style="text-align:center">✔</td>
+<td style="text-align:center">—</td>
+</tr>
+<tr>
+<td style="text-align:center">Win</td>
+<td>Edge 12</td>
+<td style="text-align:center">✔</td>
+<td style="text-align:center">✖</td>
+<td style="text-align:center">✔</td>
+</tr>
+<tr>
+<td style="text-align:center">Win</td>
+<td>IE 9 - 11</td>
+<td style="text-align:center">✔</td>
+<td style="text-align:center">✖</td>
+<td style="text-align:center">✔</td>
+</tr>
+<tr>
+<td style="text-align:center">Win</td>
+<td>IE 6 - 8</td>
+<td style="text-align:center">✖</td>
+<td style="text-align:center">✖</td>
+<td style="text-align:center">✔</td>
+</tr>
+</tbody>
+</table>
+<p>As you can see, <strong>all major browsers support external content</strong>.</p>
+<p>We had been waiting on Edge, previously, but <a href="https://twitter.com/dstorey/status/626514631884804096">David Storey</a>, Edge’s project manager assured us that native support for external content in SVGs was high on their checklist. We would <a href="http://dev.modern.ie/platform/status/svgexternalcontent/?filter=f3e0000bf&amp;search=svg">track progress</a> and <a href="https://wpdev.uservoice.com/forums/257854-microsoft-edge-developer/suggestions/6263916-svg-external-content">vote for attention</a> to this issue. Then, just as I predicted...</p>
+<blockquote>
+<p>I have complete faith in the Microsoft Edge team and absolutely expect support to arrive within the next few months.</p>
+<p>— Jon Neal (August, 2015)</p>
+</blockquote>
+<p>All of our <a href="https://dev.windows.com/en-us/microsoft-edge/platform/changelog/desktop/10586/?compareWith=10240">dreams came true</a>.</p>
+<h2 id="readability-and-accessibility">Readability and accessibility</h2>
+<p>SVGs are compelling to use for many reasons, and one of them is their ease of accessibility.</p>
+<p>Within your spritemap, have each sprite use a <code>&lt;title&gt;</code> element to identify itself.</p>
+<pre><code class="lang-html">&lt;symbol id=&quot;codepen&quot;&gt;
+    &lt;title&gt;CodePen&lt;/title&gt;
+    &lt;path etc.../&gt;
+&lt;/symbol&gt;
+</code></pre>
+<p>When this sprite is used, its title will be read aloud in <a href="http://www.freedomscientific.com/products/fs/JAWS-product-page.asp">JAWS</a> and <a href="http://www.nvaccess.org/">NVDA</a>. Then, within your document, each sprite may use a <code>title</code> attribute to identify itself.</p>
+<pre><code class="lang-html">&lt;svg title=&quot;CodePen&quot;&gt;
+    &lt;use xlink:href=&quot;map.svg#codepen&quot;/&gt;
+&lt;/svg&gt;
+</code></pre>
+<p>That title will be read aloud in <a href="http://www.apple.com/accessibility/osx/voiceover/">VoiceOver</a> and <a href="http://www.nvaccess.org/">NVDA</a>. At present, the <code>title</code> attribute is the only way to properly read aloud an SVG in VoiceOver. I’ll let you know if this changes.</p>
+<p>All together, <strong>use the <code>title</code> attribute in your document and the <code>title</code> element in your SVG</strong>.</p>
+<p>ARIA roles may also be used to provide even more information to assistive technology.</p>
+<p>When a sprite is merely decoration, use <code>role=&quot;presentation&quot;</code>.</p>
+<pre><code class="lang-html">&lt;a href=&quot;//twitter.com/jon_neal&quot;&gt;&lt;svg role=&quot;presentation&quot;&gt;
+    &lt;use xlink:href=&quot;map.svg#twitter&quot;/&gt;
+&lt;/svg&gt; Find me on Twitter&lt;/a&gt;
+</code></pre>
+<p>Otherwise, use <code>role=&quot;img&quot;</code> and remember to add a description.</p>
+<pre><code class="lang-html">&lt;a href=&quot;//twitter.com/jon_neal&quot;&gt;&lt;svg title=&quot;Find me on Twitter&quot; role=&quot;img&quot;&gt;
+    &lt;use xlink:href=&quot;map.svg#twitter&quot;/&gt;
+&lt;/svg&gt;&lt;/a&gt;
+</code></pre>
+<h3 id="futher-reading">Futher reading</h3>
+<ul>
+<li><a href="https://www.sitepoint.com/tips-accessible-svg/">Tips for creating accessible SVG</a></li>
+<li><a href="http://blog.paciellogroup.com/2013/12/using-aria-enhance-svg-accessibility/">Using ARIA to enhance SVG accessibility</a></li>
+<li><a href="http://css-tricks.com/svg-symbol-good-choice-icons/">SVG symbol a good choice for icons</a></li>
+<li><a href="https://kartikprabhu.com/article/inline-svg-icons">Implementing inline SVG Icons</a></li>
+</ul>
+<h2 id="optimized-svgs">Optimized SVGs</h2>
+<p>SVG files, especially exported from vector tools, often contain tons of unnecessary data such as editor metadata, comments, hidden elements, and other stuff that can be safely removed without affecting SVG rendering result.</p>
+<p>Use a tool like <a href="https://github.com/svg/svgo">SVGO</a> to optimize SVG spritemaps.</p>
+<pre><code class="lang-bash">$ [sudo] npm install -g svgo
+$ svgo spritemap.svg
+</code></pre>
+
+      </body>
+    </html>

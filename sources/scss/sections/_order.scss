@@ -18,20 +18,20 @@
 	}
 }
 
+.order-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
 .order-content {
 	display: flex; 
 	flex-direction: column;
 	justify-content: center;
-	padding-top: rem(61px);
 
 	@include tablets() {
 		text-align: center;
-		padding-top: rem(10px);
 		align-items: center;
-	}
-	
-	@include vertical() {
-		padding-top: rem(0px);
 	}
 }
 
@@ -56,7 +56,6 @@
 	@include vertical() {
 		font-size: rem(50px);
 		line-height: rem(58px);
-
 	}
 }
 
@@ -68,10 +67,6 @@
 		flex-direction: column;
 		align-items: center;
 		max-width: rem(455px);
-	}
-
-	@include phones () {
-		padding: 0;
 	}
 }
 
@@ -103,6 +98,7 @@
 	flex: 1;
 	margin-left: rem(20px);
 	cursor: pointer;
+
 	&:first-child {
 		margin-left: 0;
 	}
@@ -141,7 +137,6 @@
 	@include phones () {
 		margin-bottom: rem(40px);
 	}
-
 	@include vertical () {
 		margin-bottom: rem(30px);
 	}
@@ -167,6 +162,7 @@
 	white-space: nowrap;
 	align-items: center;
 	position: relative;
+
 	&:first-child {
 		margin-left: 0;
 	}
@@ -184,6 +180,7 @@
 	border-radius: 50%;
 	background-color: #fff;
 	position: relative;
+
 	&:after {
 		content: "";
 		display: block;
@@ -259,6 +256,7 @@
 	margin-right: 0;
 	padding: rem(10px) rem(15px);
 	background: transparent;
+	
 	&:hover {
 		background: #fff;
 		color: black;

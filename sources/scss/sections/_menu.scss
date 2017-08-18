@@ -55,6 +55,7 @@
 	justify-content: center;
 	align-items: center;
 	position: relative;
+	cursor: pointer;
 	&:before {
 		content: "";
 		position: absolute;
@@ -80,17 +81,17 @@
 .menu-list__item.active {
 	display: flex;
 	transition: 1s;
-	 .menu-list__description {
-		// width: rem(540px);
+	.menu-list__description {
+		width: rem(540px);
 		height: 100%;
-		transition: 0.5s;
+		transition: width 0.5s;
 
 		@include tablets() {
-			// width: rem(350px);
+			width: 100%;
 		}
 
 		@include vertical() {
-			// width: 100%;
+			width: 100%;
 		}
 	}
 	.menu-list__text {
