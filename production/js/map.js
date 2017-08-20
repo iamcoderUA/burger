@@ -11,10 +11,10 @@ window.initMap = function() {
 
 	var markers = 
 	[
-	{title: 'ул. ШейхЗаид, стр.5', location: {lat: 59.9276608, lng: 30.3108849}},
-	{title: 'ул. ШейхЗаид, стр.5', location: {lat: 59.9276608, lng: 30.2108849}},
-	{title: 'ул. ШейхЗаид, стр.5', location: {lat: 59.9276608, lng: 30.4108849}},
-	{title: 'ул. ШейхЗаид, стр.5', location: {lat: 60.9276608, lng: 30.3108849}}
+	{title: 'ул. ШейхЗаид, стр.1', location: {lat: 59.9276608, lng: 30.3108849}},
+	{title: 'ул. ШейхЗаид, стр.2', location: {lat: 59.927638, lng: 30.360182}},
+	{title: 'ул. ШейхЗаид, стр.3', location: {lat: 59.941890, lng: 30.275987}},
+	{title: 'ул. ШейхЗаид, стр.4', location: {lat: 59.965393, lng:  30.312774}}
 	]
 
 	markers.forEach(function(feature) {
