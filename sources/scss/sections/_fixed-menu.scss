@@ -42,7 +42,7 @@
   }
 }
 
-.fixed-menu__item_active {
+.fixed-menu__item.active {
   & .fixed-menu__link:before {
     transform: scale(1);
   }
