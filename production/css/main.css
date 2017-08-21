@@ -1155,6 +1155,7 @@ section {
 @media screen and (max-width: 768px) {
   .burger-content__left {
     margin-bottom: 1.25rem;
+    height: 40vh;
   }
 }
 

@@ -112,6 +112,7 @@
 
 	@include tablets {
 		margin-bottom: rem(20px);
+		height: 40vh;	
 	}
 
 	@include phones {
