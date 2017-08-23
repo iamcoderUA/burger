@@ -916,7 +916,7 @@ section {
 
 @media screen and (max-width: 480px) {
   .advantages__image {
-    margin-right: 20px;
+    margin-right: 1.25rem;
   }
 }
 
@@ -1026,7 +1026,7 @@ section {
 
 @media screen and (max-width: 480px) {
   .burger-content__prev, .burger-content__next {
-    width: 2.1875rem;
+    width: 2.8125rem;
   }
 }
 
@@ -1123,6 +1123,41 @@ section {
   }
 }
 
+@media screen and (max-width: 480px) {
+  .burger-content__item {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    padding-top: 0rem;
+    max-width: 420px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .owl-item.active {
+    max-width: 420px !important;
+    margin-right: 50px;
+    max-width: 420px;
+    margin-left: 7px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .owl-item.active {
+    max-width: 280px !important;
+    margin-left: 4px;
+  }
+}
+
 .burger-content__left, .burger-content__right {
   -webkit-box-flex: 1;
   -webkit-flex: 1;
@@ -1134,6 +1169,17 @@ section {
   .burger-content__left, .burger-content__right {
     width: 85%;
     text-align: center;
+  }
+}
+
+.owl-carousel .owl-item img {
+  width: 80%;
+  max-width: 65%;
+}
+
+@media screen and (max-width: 480px) {
+  .owl-carousel .owl-item img {
+    max-width: 65%;
   }
 }
 
@@ -1155,13 +1201,14 @@ section {
 @media screen and (max-width: 768px) {
   .burger-content__left {
     margin-bottom: 1.25rem;
-    height: 40vh;
+    height: 45vh;
   }
 }
 
 @media screen and (max-width: 480px) {
   .burger-content__left {
     margin-bottom: 0.3125rem;
+    height: 30vh;
   }
 }
 
@@ -1463,11 +1510,6 @@ section {
   line-height: 1rem;
   color: #fff;
   text-align: center;
-}
-
-.owl-carousel .owl-item img {
-  width: 70%;
-  max-width: 60%;
 }
 
 .team {
@@ -1813,7 +1855,7 @@ section {
   }
 }
 
-@media screen and (max-width: 768px) and (max-width: 480px) {
+@media screen and (max-width: 480px) {
   .menu-list__link {
     width: 2.625rem;
   }

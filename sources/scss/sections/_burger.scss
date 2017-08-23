@@ -31,7 +31,7 @@
 	position: absolute;
 
 	@include phones {
-		width: rem(35px);
+		width: rem(45px);
 	}
 	@include vertical {
 		width: rem(25px);
@@ -65,7 +65,6 @@
 	@include phones {
 		left: 98%;
 	}
-	
 }
 
 .burger-content__prev-icon {
@@ -94,6 +93,28 @@
 		padding-bottom: 0;
 		padding-top: rem(30px);
 	}
+	@include phones {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		padding-top: rem(0px);
+		max-width: 420px;
+	}
+}
+
+.owl-item.active {
+
+	@include phones {
+		max-width: 420px !important;
+		margin-right: 50px;
+		max-width: 420px;
+		margin-left: 7px;
+	}
+	@include vertical {
+		max-width: 280px !important;
+		margin-left: 4px;
+	}
+
 }
 
 .burger-content__left, .burger-content__right {
@@ -105,6 +126,15 @@
 	}
 }
 
+.owl-carousel .owl-item img { 
+	width: 80%;
+	max-width: 65%;
+
+	@include phones {
+		max-width: 65%;
+	}
+}
+
 .burger-content__left {
 	display: flex;
 	justify-content: center;
@@ -112,11 +142,11 @@
 
 	@include tablets {
 		margin-bottom: rem(20px);
-		height: 40vh;	
+		height: 45vh;	
 	}
-
 	@include phones {
 		margin-bottom: rem(5px);
+		height: 30vh;	
 	}
 }
 
@@ -126,7 +156,6 @@
 	@include tablets {
 		width: 75%;
 	}
-
 	@include phones {
 		width: 90%;
 	}
@@ -145,7 +174,6 @@
 		padding: 0 7%;
 		margin-bottom: rem(15px);
 	}
-
 	@include phones {
 		font-size: rem(50px);
 		margin-bottom: rem(10px);
@@ -218,7 +246,6 @@
 		top: rem(30px);
 		left: rem(10px);
 	}
-
 	@include vertical {
 		width: rem(60px);
 		height: rem(60px);
@@ -237,7 +264,6 @@
 			@include phones {
 				padding: rem(15px);
 			}
-
 			@include vertical {
 				width: rem(230px);
 				height: rem(330px);
@@ -275,7 +301,7 @@
 	border-radius: rem(5px);
 	opacity: .92;
 	transition: 0.3s;
-	
+
 	@include phones {
 		left: rem(60px);
 	}
@@ -309,7 +335,6 @@
 		right: rem(30px);
 		left: auto;
 	}
-
 	@include phones {
 		right: rem(15px);
 		width: rem(50px);
@@ -337,9 +362,7 @@
 	@include phones {
 		margin-left: -29%;
 		font-size: rem(16px);
-
 		margin-left: -29%;
-
 	}
 }
 
@@ -350,8 +373,3 @@
 	text-align: center;
 }
 
-
-.owl-carousel .owl-item img { 
-	width: 70%;
-	max-width: 60%;
-}
