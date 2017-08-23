@@ -1706,6 +1706,15 @@ section {
   justify-content: space-between;
 }
 
+@media screen and (max-width: 768px) {
+  .menu {
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+  }
+}
+
 @media screen and (max-width: 480px) {
   .menu {
     -webkit-box-pack: end;
@@ -1723,7 +1732,11 @@ section {
 
 @media screen and (max-width: 768px) {
   .menu-title {
-    padding-top: 3.125rem;
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    z-index: 0;
+    padding-top: 1.875rem;
     padding-left: 1.5rem;
   }
 }
@@ -1806,44 +1819,28 @@ section {
   }
 }
 
-.menu-list__item.active {
+.menu-list__item {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-transition: 1s;
-  -o-transition: 1s;
-  transition: 1s;
-}
-
-.menu-list__item.active .menu-list__description {
-  width: 33.75rem;
-  height: 100%;
-  -webkit-transition: width 0.5s;
-  -o-transition: width 0.5s;
-  transition: width 0.5s;
-}
-
-@media screen and (max-width: 768px) {
-  .menu-list__item.active .menu-list__description {
-    width: 100%;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .menu-list__item.active .menu-list__description {
-    width: 100%;
-  }
 }
 
 .menu-list__item.active .menu-list__text {
   opacity: 1;
-  -webkit-transition: .7s;
-  -o-transition: .7s;
-  transition: .7s;
+  -webkit-transition: opacity .7s;
+  -o-transition: opacity .7s;
+  transition: opacity .7s;
   -webkit-transition-delay: .4s;
   -o-transition-delay: .4s;
   transition-delay: .4s;
+}
+
+.menu-list__item.active .menu-list__title {
+  color: #f9b43b;
+  -webkit-transition: color .5s;
+  -o-transition: color .5s;
+  transition: color .5s;
 }
 
 .menu-list__title {
@@ -1854,6 +1851,9 @@ section {
   -webkit-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
+  -webkit-transition: color .5s;
+  -o-transition: color .5s;
+  transition: color .5s;
 }
 
 @media screen and (max-width: 480px) {
@@ -1869,6 +1869,12 @@ section {
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
+}
+
+@media screen and (max-width: 768px) {
+  .menu-list__description {
+    z-index: 100;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -1893,6 +1899,7 @@ section {
 @media screen and (max-width: 768px) {
   .menu-list__text {
     font-size: 0.75rem;
+    z-index: 100;
   }
 }
 
