@@ -3,9 +3,8 @@ $(document).ready(function() {
 	$('.hamb-menu').on('click', function(e) {
 		e.preventDefault();
 
-		var fsMenuActive = $(e.target).closest('.maincontent').next('.hamburger-menu').addClass('active'),
-		navOpen =	fsMenuActive.find('.nav').addClass('active');
-		navOpen.slideDown(600);
+		var fsMenuActive = $(e.target).closest('.maincontent').next('.hamburger-menu').addClass('active');
+		fsMenuActive.find('.nav').addClass('active').slideDown(600);
 	});
 
 	$('.hamburger-menu__close').on('click', function(e) {

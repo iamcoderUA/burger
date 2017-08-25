@@ -31,6 +31,7 @@ var submitForm = function (ev) {
                 //     $('#form').get(0).reset();
                 // });
                 $('#form').get(0).reset();
+                inp.css("border", "none");
             } else{
                 alert('<p class="error">' + mes + '</p>');
                 // $('[data-fancyform-error]').fancybox();

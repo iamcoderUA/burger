@@ -75,12 +75,7 @@
 .nav__link {
 	font-family: "Ubuntu-Medium";
 	font-size: rem(26px);
-	color: #FFF;
+	color: #fff;
 	text-transform: uppercase;
-
-	&:hover {
-		text-decoration: underline;
-		color: $colsec1;
-	}
+	color: #fff;
 }
-
