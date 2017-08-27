@@ -1,4 +1,4 @@
-$(document).ready(function() {
+$(function($){
 
 	$('.hamb-menu').on('click', function(e) {
 		e.preventDefault();

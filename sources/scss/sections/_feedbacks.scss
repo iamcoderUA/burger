@@ -70,6 +70,10 @@
 	@include phones() {
 		padding-top: rem(45px);
 	}
+
+	@include vertical() {
+		padding-top: rem(35px);
+	}
 }
 
 .feed-page__title {

@@ -29,6 +29,8 @@
 	width: rem(40px);
 	height: rem(30px);
 	position: absolute;
+	display: block;
+	z-index: 600;
 
 	@include phones {
 		width: rem(45px);
@@ -102,36 +104,23 @@
 	}
 }
 
-.owl-item.active {
-
-	@include phones {
-		max-width: 420px !important;
-		margin-right: 50px;
-		max-width: 420px;
-		margin-left: 7px;
-	}
-	@include vertical {
-		max-width: 280px !important;
-		margin-left: 4px;
-	}
-
-}
-
 .burger-content__left, .burger-content__right {
 	flex: 1;
 
 	@include tablets {
-		width: 85%;
+		width: 100%;
 		text-align: center;
 	}
 }
 
 .owl-carousel .owl-item img { 
-	width: 80%;
-	max-width: 65%;
+	max-width: 70%;
 
+	@include tablets {
+		max-width: 52%;
+	}
 	@include phones {
-		max-width: 65%;
+		max-width: 50%;
 	}
 }
 
@@ -188,8 +177,11 @@
 	line-height: rem(24px);
 	padding-right: rem(10px);
 
-	@include tablets {
+	@include tablets() {
 		margin-bottom: rem(10px);
+	}
+	@include vertical() {
+		font-size: 12px;
 	}
 }
 

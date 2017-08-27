@@ -1,29 +1,30 @@
-var submitForm = function (ev) {
-    ev.preventDefault();
+$(function($){
+    var submitForm = function (ev) {
+        ev.preventDefault();
 
-    var form = $(ev.target),
-    inp = $('.order-form__input'),
-    trigger = 0,
-    request = ajaxForm(form);
+        var form = $(ev.target),
+        inp = $('.order-form__input'),
+        trigger = 0,
+        request = ajaxForm(form);
 
-    inp.each( function(e){
-        var $this = $(this);
-        inp.addClass('valid');
+        inp.each( function(e){
+            var $this = $(this);
+            inp.addClass('valid');
 
-        if ($this.hasClass("valid")) {
-            if ($this.val() === "" || $this.val() === " ") {
-                $this.css("border", "2px solid red");
-                return trigger = 1;
-            }; 
-        };
-    });
+            if ($this.hasClass("valid")) {
+                if ($this.val() === "" || $this.val() === " ") {
+                    $this.css("border", "2px solid red");
+                    return trigger = 1;
+                }; 
+            };
+        });
 
-    if (trigger === 0) {
-        request.done(function(msg) {
-            var mes = msg.mes,
-            status = msg.status;
-            if (status === 'OK') {
-                alert(mes);
+        if (trigger === 0) {
+            request.done(function(msg) {
+                var mes = msg.mes,
+                status = msg.status;
+                if (status === 'OK') {
+                    alert(mes);
                 // $('[data-fancyform-success]').fancybox(); // срабатывает только со второго раза!!!
                 // $('.form-popup__close').on('click', function(e){
                 //     e.preventDefault();
@@ -59,5 +60,6 @@ var ajaxForm = function (form) {
         dataType: 'JSON'
     });
 };
-
 $('#form').on('submit', submitForm);
+});
+

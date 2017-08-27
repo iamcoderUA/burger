@@ -1,11 +1,21 @@
 window.initMap = function() {
-	var icons = '../img/icons/map-marker.svg',
-	map = new google.maps.Map(document.getElementById('map'), 
+	var icons = '../img/icons/map-marker.svg';
+
+	if ($(window).width() <= 320) {
+		var map = new google.maps.Map(document.getElementById('map'), 
+	{
+		center: {lat: 59.9276608, lng: 30.3108849},
+		zoom: 11,
+		disableDefaultUI: true
+	});
+	} else {
+		var map = new google.maps.Map(document.getElementById('map'), 
 	{
 		center: {lat: 59.9276608, lng: 30.3108849},
 		zoom: 12,
 		disableDefaultUI: true
 	});
+	};
 
 	map.setOptions({draggable: true, zoomControl: false, scrollwheel: false, disableDoubleClickZoom: false});
 
