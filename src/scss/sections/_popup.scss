@@ -1,0 +1,119 @@
+.popup {
+	display: none;
+	max-width: rem(500px);
+	&.active {
+		display: block;
+	}
+
+	@include tablets {
+		max-width: 400px;
+	}
+
+	@include phones {
+		max-width: 290px;
+	}
+}
+
+.review {
+	padding: rem(25px) rem(20px);
+	position: relative;
+}
+
+.review__title {
+	font-family: "Gagalin";
+	font-size: rem(14px);
+	text-transform: uppercase;
+	margin-bottom: rem(25px);
+}
+
+.review__text {
+	font-size: rem(14px);
+	font-family: "Ubuntu-Light";
+}
+
+.review__close {
+	width: rem(15px);
+	height: rem(15px);
+	display: block;
+	position: absolute;
+	right: rem(20px);
+	top: rem(20px);
+	opacity: .7;
+	transition: .3s;
+
+	&:hover {
+		opacity: 1;
+	}
+}
+
+.fancybox-close-small {
+	display: none;
+	&:after {
+		display: none;
+	}
+}
+
+.review__close {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 34px;
+	height: 34px;
+	background: transparent;
+
+	&:after {
+		content: '×';
+		position: absolute;
+		top: 5px;
+		right: 30px;
+		width: 0px;
+		height: 0px;
+		font: 24px/36px Arial,"Helvetica Neue",Helvetica,sans-serif;
+		color: red;
+		font-weight: 300;
+		text-align: center;
+		border-radius: 50%;
+		border-width: 0;
+		opacity: .7;
+		transition: .2s;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+}
+
+.form-popup {
+	width: rem(240px);
+	position: absolute;
+	top: 27%;
+	left: 40%;
+	background-color: #fff;
+	border-radius: rem(5px);
+	z-index: 100;
+	@include tablets {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	@include phones {
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
+.form-popup__content {
+	padding: rem(20px);
+	text-align: center;
+}
+
+.form-popup__text {
+	margin-bottom: rem(20px);
+	font-size: rem(14px);
+}
+
+.error-message {
+	color: red;
+}

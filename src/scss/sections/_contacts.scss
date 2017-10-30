@@ -1,0 +1,113 @@
+#map {
+	position: relative;
+	height: calc(100% - 58px);
+
+	@include phones {
+		height: calc(100% - 14.5%);
+	}
+}
+
+.footer {
+	background-image: url(../img/bg/bg-footer.png);
+	background-position: center;
+	width: 100%;
+	height: 14.5%;
+	padding-top: rem(7px);
+	padding-bottom: rem(9px);
+
+	@include phones() {
+		padding-top: rem(23px);
+	}
+	@include vertical() {
+		padding-top: rem(10px);
+	}
+}
+
+.footer-container {
+	display: flex;
+	justify-content: space-between;
+	width: 85%;
+	margin: 0 auto;
+	
+	@include tablets() {
+		width: 90%;
+	}
+
+	@include phones() {
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+		max-width: rem(480px);
+	}
+}
+
+.footer-left {
+	font-size: rem(14px);
+
+	@include phones {
+		text-align: center;
+		margin-bottom: rem(10px);
+	}
+}
+
+.footer-left__adress {
+	color: #fff;
+	margin-bottom: rem(6px);
+}
+
+.footer-left__phone {
+	display: inline-block;
+	font-family: "Ubuntu-Bold";
+	color: #e45028;
+}
+
+.footer-left__phone-icon {
+	fill: #e45028;
+	display: inline-block;
+	vertical-align: middle;
+	width: rem(12px);
+	height: rem(19px);
+}
+
+.footer-left__phone-text {
+	display: inline-block;
+	padding-left: rem(5px);
+}
+
+.footer-right {
+	display: flex;
+}
+
+.socials {
+	display: flex;
+	align-items: center;
+}
+
+.socials__item {
+	margin-left: rem(20px);
+}
+
+.socials__link {
+	display: inline-block;
+	max-width: rem(23px);
+	max-height: rem(20px);
+	opacity: .3;
+	transition: .3s;
+	&:hover {
+		opacity: 1;
+		transition: .3s;
+	}
+}
+
+.socials__icon {
+	width: rem(20px);
+	height: rem(20px);
+	fill: #fff;
+
+
+	@include phones() {
+		width: rem(25px);
+		height: rem(25px);
+	}
+}
